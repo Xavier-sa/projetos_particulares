@@ -1,0 +1,75 @@
+/* Resetando alguns estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos gerais para o corpo da página */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    font-size: 1.5rem;
+  }
+  
+  header .logo {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  /* Estilos do conteúdo principal */
+  main {
+    margin-top: 30px;
+  }
+  
+  /* Estilo da seção de boas-vindas */
+  .welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .welcome p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+  
+  /* Seção da imagem */
+  .image-section {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .image-box {
+    width: 20vw;
+    height: 500px;
+    background-image: url('https://raw.githubusercontent.com/Xavier-sa/imagens/refs/heads/main/the%20breaker.JPG'); /* Imagem de exemplo */
+    background-size: contain;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Rodapé */
+  footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Adicionando ícones com Font Awesome */
+  .fas {
+    margin-right: 8px;
+  }
+  
