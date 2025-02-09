@@ -1,0 +1,191 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color:  #f4f4f4;
+        color: #333;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .barralateralmenu {
+        background-color: #23232e;
+        color: white;
+        width: 250px;
+        height: 100vh;
+        padding-top: 20px;
+        position: fixed;
+    }
+
+    .barralateralmenu a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+
+    .barralateralmenu a:hover {
+        background-color: #575757;
+    }
+
+    .content {
+        margin-left: 270px;
+        padding: 20px;
+        flex-grow: 1;
+    }
+
+    .catalogo {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .catalogo h1 {
+        font-size: 2rem;
+        transition: transform 0.3s ease, font-size 0.3s ease;
+        color: #333;
+    }
+
+    .catalogo h1:hover {
+        transform: scale(1.2);
+        font-size: 2.4rem;
+        color:rgb(5, 15, 25);
+    }
+
+    .form-venda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-venda select, .form-venda input {
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .btn-vender {
+        background-color: #007bff;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn-voltar {
+        background-color:rgb(140, 255, 0);
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn-login {
+        background-color: #007bff;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-vender:hover {
+        background-color: #0056b3;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card {
+        background-color: #eee;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        cursor: pointer;
+    }
+
+    .card-image {
+        height: 150px;
+        object-fit: cover;
+        border-bottom: 2px solid #eee;
+    }
+
+    .card-info {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .preco { 
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: green;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 30px;
+        border-collapse: collapse;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #dfdf50;
+    }
+
+    #totalVenda, #troco {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .totalaserpago{
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .valorfinal{
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #000000;
+    }
+
+    #dinheiroRecebido {
+        font-size: 2rem;
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }

@@ -1,0 +1,36 @@
+/app
+├── assets
+│   ├── css
+│   ├── js
+│   ├── img
+│   └── fonts
+├── config
+│   └── Database.php
+├── controller
+│   ├── ProdutoController.php
+│   ├── VendaController.php
+│   └── ClienteController.php
+├── model
+│   ├── Produto.php
+│   ├── Venda.php
+│   └── Cliente.php
+├── view
+│   ├── produtos
+│   │   └── index.php
+│   ├── vendas
+│   │   └── index.php
+│   ├── clientes
+│   │   └── index.php
+│   └── layout
+│       ├── header.php
+│       ├── footer.php
+│       └── sidebar.php
+├── public
+│   └── index.php
+└── routes
+    └── web.php
+
+
+
+
+*Pagamento = PIX -DEBITO-CREDITO
