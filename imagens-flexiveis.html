@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <picture>
+        <img src="1.png" alt="A imagem flexível funciona">
+    </picture>
+
+    <picture>
+        <source media="(max-widht: 1050px)" srcset="2.png" type="image/png">
+        <img src="1.png" alt="A imagem flexível funciona">
+    </picture>
+    
+    <picture>
+        <source media="(max-widht: 750px)" srcset="1.png" type="image/png">
+        <source media="(max-widht: 1050px)" srcset="2.png" type="image/png">
+        <img src="1.png" alt="A imagem flexível funciona">
+
+    </picture>
+    
+</body>
+</html>
