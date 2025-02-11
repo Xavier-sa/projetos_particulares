@@ -92,8 +92,9 @@ header {
 /* Conteúdo Principal */
 .conteudo {
     margin-left: 250px; /* Deixa espaço à esquerda para a barra lateral */
-    padding: 20px; /* Espaçamento interno */
+    padding: 20px ; /* Espaçamento interno */
     flex-grow: 1; /* Faz o conteúdo ocupar o restante do espaço */
+    overflow: auto;
 }
 
 .main-content {
@@ -136,11 +137,12 @@ header {
 
 /* Rodapé */
 footer {
-    background-color: #333; /* Cor escura para o rodapé */
+    background-color: #333333; /* Cor escura para o rodapé */
     color: white; /* Texto branco */
     text-align: center; /* Centraliza o texto */
-    padding: 200px 0; /* Espaçamento interno */
+    padding: 25px 0; /* Espaçamento interno */
     margin-top: 500px; /* Espaçamento entre o conteúdo e o rodapé */
+    
 }
 
 /* Responsividade para telas pequenas */

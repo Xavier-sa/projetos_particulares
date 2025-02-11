@@ -1,0 +1,42 @@
+.navbar {
+    height: 68px;
+    width: calc(100vw - 200px);
+    position: fixed;
+    right: 0;
+    background-color: aquamarine;
+    
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+
+        img {
+            height: 48px;
+        }
+    }
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: purple;
+
+    nav {
+        img {
+            width: 100%;
+        }
+
+        ul {
+
+        }
+    }
+}
+
+.footer {
+    width: calc(100vw - 200px);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: bisque;
+}
