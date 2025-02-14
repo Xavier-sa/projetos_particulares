@@ -1,0 +1,18 @@
+/seu-projeto
+│
+├── /assets                # Para imagens e arquivos estáticos
+│   ├── faviconessa.jpg    # Exemplo de imagem
+│   ├── perfil_title.jpeg  # Outra imagem
+│   └── logo.png           # Exemplo de outra imagem
+│
+├── /css                   # Para arquivos de estilo CSS
+│   └── style.css          # Seu arquivo CSS principal
+│
+├── /js                    # Para arquivos JavaScript
+│   └── script.js          # Seu arquivo JavaScript principal
+│
+├── /img                   # Para outras imagens (opcional, caso queira organizar melhor)
+│   └── exemplo_imagem.jpg # Imagem de exemplo
+│
+├── index.html             # Seu arquivo HTML principal
+└── README.md              # Arquivo de documentação (opcional)

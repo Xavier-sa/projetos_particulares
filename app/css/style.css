@@ -1,0 +1,122 @@
+/* Reset básico de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 20px;
+    align-items: center;
+}
+
+/* Cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Container geral */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+}
+
+/* Seção de Sobre */
+#sobre {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 350px;
+    height: 400px;
+    border-radius: 90%;
+    margin: 38px 20px;
+}
+
+/* Seções (habilidades, portfólio, formação, contato) */
+div {
+    margin-bottom: 40px;
+}
+
+div h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Links */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+p{
+    margin-top: 1vw;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 480px;
+    display:flex-end;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .container {
+        width: 90%;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+}
