@@ -1,3 +1,5 @@
 <?php
 
-header (locale: 'app/')
+header("Location: /app/view/pages/home.php");
+exit;
+?>
