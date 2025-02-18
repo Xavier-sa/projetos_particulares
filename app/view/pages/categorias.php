@@ -19,7 +19,7 @@ include('../componentes/sidebar.php');
     <nav>
         
         <ul>
-            <li><a href="teste.php">Sistemas</a></li>
+            <li><a href="../pages/categorias/sistemas.php">Sistemas</a></li>
             <li><a href="teste.php">Aplicativos Web</a></li>
             <li><a href="teste.php">Consultoria</a></li>
             <li><a href="teste.php">Suporte Técnico</a></li>

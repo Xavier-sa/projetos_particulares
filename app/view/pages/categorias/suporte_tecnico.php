@@ -22,7 +22,7 @@ include('../../componentes/sidebar.php');
    
     
 </main>
-<script src="<?php echo ASSETS_PATH; ?>redirect.js"></script>  
+<script src="<?php echo JS_PATH; ?>redirect.js"></script>  
 
 
 <?php include('../../componentes/footer.php'); ?>  

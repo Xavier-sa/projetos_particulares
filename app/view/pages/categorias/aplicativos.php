@@ -9,7 +9,7 @@ include('../componentes/sidebar.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xavier Solutions - Teste</title>  <!-- Título da Página -->
-    <link rel="stylesheet" href="<?php echo CSS_PATH; ?>style.css">  <!-- Caminho do CSS -->
+    <link rel="stylesheet" href="<?php echo CSS_PATH; ?>">  <!-- Caminho do CSS -->
 </head>
 <body>
 
@@ -18,11 +18,11 @@ include('../componentes/sidebar.php');
     <h6>Você será redirecionado em breve...</h6> 
 
     
-    <script src="<?php echo ASSETS_PATH; ?>rd.js"></script>  
+    
    
 </main>
 
 <?php include('../componentes/footer.php'); ?>
-
+<script src="<?php echo JS_PATH; ?>rd.js"></script>  
 </body>
 </html>

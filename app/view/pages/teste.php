@@ -3,6 +3,8 @@
 include('../../config/env.php');  
 include('../componentes/navbar.php');  
 include('../componentes/sidebar.php');  
+
+
 ?>
 
 <!DOCTYPE html>
@@ -27,12 +29,14 @@ include('../componentes/sidebar.php');
 
     
 </main>
-  <script>setTimeout(function() {
+  <!-- <script>setTimeout(function() {
     
     window.location.href = "home.php"; 
     
-}, 2000);  </script>
+}, 2000);  </script> -->
 <?php include('../componentes/footer.php'); ?>  
+
+<script src="<?php echo JS_PATH; ?>rd.js"></script>  
 
 </body>
 </html>

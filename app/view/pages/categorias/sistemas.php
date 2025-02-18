@@ -19,11 +19,11 @@ include('../componentes/sidebar.php');  // Inclui a sidebar
     <h6>Você será redirecionado em breve...</h6>  
 
    
-    <script src="<?php echo ASSETS_PATH; ?>rd.js"></script>  
+    
     
 </main>
 
 <?php include('../componentes/footer.php'); ?>  
-
+<script src="<?php echo JS_PATH; ?>rd.js"></script>  
 </body>
 </html>
