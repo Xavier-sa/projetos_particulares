@@ -19,14 +19,15 @@ include('../../componentes/sidebar.php');  // Inclui a sidebar
 
 <main class="content">
     <h1>XAVIER TESTE</h1>  
+    <h2>Consultoria</h2>
     <h6>Você será redirecionado em breve...</h6> 
 
     
-    <script src="<?php echo JS_PATH; ?>rd.js"></script>  
+    
     
 </main>
 
 <?php include('../../componentes/footer.php'); ?>  
-
+<script src="<?php echo JS_PATH; ?>rd.js"></script>  
 </body>
 </html>

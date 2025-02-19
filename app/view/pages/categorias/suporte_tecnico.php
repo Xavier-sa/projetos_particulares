@@ -16,16 +16,17 @@ include('../../componentes/sidebar.php');
 
 <main class="content">
     <h1>XAVIER TESTE</h1>
+    <h2>Suporte Tecnico</h2>
     <h6>Você será redirecionado em breve...</h6>  
 
   
    
     
 </main>
-<script src="<?php echo JS_PATH; ?>redirect.js"></script>  
+
 
 
 <?php include('../../componentes/footer.php'); ?>  
-
+<script src="<?php echo JS_PATH; ?>rd.js"></script>  
 </body>
 </html>

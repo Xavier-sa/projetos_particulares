@@ -30,3 +30,7 @@ Além disso, ao longo dos anos, desenvolvi outras habilidades técnicas, como ma
 Com um forte desejo de avançar na área de TI e contribuir com minha dedicação e habilidades, estou pronto para dar o próximo passo e iniciar minha carreira no desenvolvimento de sistemas
 
 
+
+
+
+# Estou aprendendo a importar componentes em PHP e a definir caminhos absolutos para arquivos estáticos como imagens, JavaScript e CSS. Isso facilita a reutilização de código e torna a manutenção do projeto mais eficiente, sem a necessidade de repetir o mesmo código em várias páginas. Um passo importante para tornar o desenvolvimento mais organizado e escalável!

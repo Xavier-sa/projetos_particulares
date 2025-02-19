@@ -1,7 +1,9 @@
 <?php
-include('../../config/env.php');  // Inclui as configurações
-include('../componentes/navbar.php');  // Inclui a barra de navegação
-include('../componentes/sidebar.php');  // Inclui a sidebar
+require_once(__DIR__ . '/../../../config/env.php');
+
+include('../../componentes/navbar.php');
+
+include('../../componentes/sidebar.php');  // Inclui a sidebar
 ?>
 
 <!DOCTYPE html>
@@ -9,13 +11,14 @@ include('../componentes/sidebar.php');  // Inclui a sidebar
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xavier Solutions - Teste</title>  <!-- Título da Página -->
-    <link rel="stylesheet" href="<?php echo CSS_PATH; ?>style.css">  <!-- Caminho do CSS -->
+    <title>Xavier Solutions - Teste</title>  
+    <link rel="stylesheet" href="<?php echo CSS_PATH; ?>style.css">  
 </head>
 <body>
 
 <main class="content">
     <h1>XAVIER TESTE</h1>  
+    <h2>sistemas</h2>  
     <h6>Você será redirecionado em breve...</h6>  
 
    

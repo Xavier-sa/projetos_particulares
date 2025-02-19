@@ -20,9 +20,9 @@ include('../componentes/sidebar.php');
         
         <ul>
             <li><a href="../pages/categorias/sistemas.php">Sistemas</a></li>
-            <li><a href="teste.php">Aplicativos Web</a></li>
-            <li><a href="teste.php">Consultoria</a></li>
-            <li><a href="teste.php">Suporte Técnico</a></li>
+            <li><a href="../pages/categorias/aplicativos.php">Aplicativos Web</a></li>
+            <li><a href="../pages/categorias/consultoria.php">Consultoria</a></li>
+            <li><a href="../pages/categorias/suporte_tecnico.php">Suporte Técnico</a></li>
         </ul>
     </nav>
     
