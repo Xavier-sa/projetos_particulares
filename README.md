@@ -4,14 +4,15 @@
 1. - Resolver caminhos!  Caminhos dos links Css\imgs
 se eu mudar de pasta ou mudar o path do projeto , quebra tudo!
 
-2. - 
 
 
 # ATV
 
-implementar listagem para as telas de artigos ,
+- implementar listagem para as telas de artigos ,
 categorias, usuarios com 
 dados mockados/fake fornecidos por um array estatico. 
+
+- implementar as telas de cadastro e edição para as funcionalidades artigos, categorias, usuarios. As telas devem apenas navegar por enquanto, não ira salvar os dados em banco, mas deve usar os dados fake do item anterior. Deve ser considerada a organização dessas telas nas estruturas do projeto.
 
 
 
