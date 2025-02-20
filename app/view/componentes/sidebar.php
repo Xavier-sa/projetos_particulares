@@ -2,11 +2,11 @@
     <nav>
         <img src="<?php echo IMG_PATH; ?>logo.jpg" alt="logo">
         <ul>
-            <li><a href="home.php">Home</a></li>
-            <li><a href="artigos.php">Artigos</a></li>
-            <li><a href="categorias.php">Categorias</a></li>
-            <li><a href="usuarios.php">Usuários</a></li>
-             <li><a href="perfil.php" style="display:none;">Perfil</a></li> <!--vamos ver quem presta atencao -->
+            <li><a href="<?php echo PG_PATH; ?>home.php">Home</a></li>
+            <li><a href="<?php echo PG_PATH; ?>artigos.php">Artigos</a></li>
+            <li><a href="<?php echo PG_PATH; ?>categorias.php">Categorias</a></li>
+            <li><a href="<?php echo PG_PATH; ?>usuarios.php">Usuários</a></li>
+             <li><a href="<?php echo PG_PATH; ?>perfil.php" style="display:none;">Perfil</a></li> <!--vamos ver quem presta atencao -->
 
             
         </ul>

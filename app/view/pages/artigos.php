@@ -15,7 +15,7 @@ include('../componentes/sidebar.php');
 <body>
     <!-- Conteúdo principal da página -->
     <main class="content">
-        <h1>Artigo sobre minha Trajetória</h1>
+        <!-- <h1>Artigo sobre minha Trajetória</h1>
         <article>
             <p>Atualmente, sou colaborador da Solurb, onde comecei minha jornada como coletor. Essa função, embora operacional, me proporcionou um aprendizado valioso sobre rotas e aprimoramento das minhas habilidades de comunicação com diversos públicos. Após 9 meses, fui aprovado para a vaga de porteiro de ecoponto, onde atuei no ecoponto Nova Lima, prestando atendimento à comunidade, orientando sobre descartes e resolvendo conflitos.</p>
 
@@ -26,7 +26,7 @@ include('../componentes/sidebar.php');
             <p>Além disso, ao longo dos anos, desenvolvi outras habilidades técnicas, como manutenção básica de motos, marcenaria e construção básica. Essas experiências me ensinaram a importância de resolver problemas práticos, habilidade que acredito ser essencial tanto em desenvolvimento de software quanto no trabalho com hardware.</p>
 
             <p>Com um forte desejo de avançar na área de TI e contribuir com minha dedicação e habilidades, estou pronto para dar o próximo passo e iniciar minha carreira no desenvolvimento de sistemas.</p>
-        </article>
+        </article> -->
 
        
     </main>

@@ -17,7 +17,7 @@ include('../componentes/sidebar.php');
     <main class="content">
     <h1>Bem-vindo à Xavier Solutions!</h1>
             <p>Transformamos suas ideias em soluções digitais inovadoras. Explore nossos serviços e entre em contato para saber mais.</p>
-            <a href="sobre.php">Saiba Mais</a>
+            <a href="<?php echo PG_PATH; ?>sobre.php">Saiba Mais</a>
         <!-- <nav>
             <ul>
                 <li>Aba 1</li>

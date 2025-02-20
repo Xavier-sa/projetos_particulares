@@ -26,7 +26,7 @@ include('../../componentes/sidebar.php');  // Inclui a sidebar
     
 </main>
 
-<?php include('../componentes/footer.php'); ?>  
+<?php include('../../componentes/footer.php'); ?>  
 <script src="<?php echo JS_PATH; ?>rd.js"></script>  
 </body>
 </html>

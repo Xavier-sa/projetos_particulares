@@ -14,6 +14,41 @@ dados mockados/fake fornecidos por um array estatico.
 
 - implementar as telas de cadastro e edição para as funcionalidades artigos, categorias, usuarios. As telas devem apenas navegar por enquanto, não ira salvar os dados em banco, mas deve usar os dados fake do item anterior. Deve ser considerada a organização dessas telas nas estruturas do projeto.
 
+## Quebrar os probelmas:
+
+1. **Listagem**: 
+   - Criar telas onde você possa listar os **artigos**, **categorias** e **usuários**.
+   - Os dados dessas listas não precisam vir de um banco de dados real, mas sim de um **array estático (fake)**, ou seja, um conjunto de dados fictícios que você define no código.
+
+2. **Cadastro e Edição**:
+   - Criar telas de **cadastro** e **edição** para os **artigos**, **categorias** e **usuários**.
+   - Essas telas devem permitir ao usuário navegar entre elas, mas por enquanto, os dados não serão realmente salvos em banco. O que acontece é que essas telas vão usar os dados **fake** fornecidos anteriormente para mostrar como seriam os fluxos de cadastro e edição.
+   
+3. **Estrutura do Projeto**:
+   - A organização das telas dentro do seu projeto deve ser considerada. Isso quer dizer que você vai estruturar as telas de forma que o código tenha boa organização, com separação de responsabilidades entre os diferentes tipos de telas e componentes. Isso pode envolver o uso de pastas para cada parte do sistema (ex.: `artigos`, `categorias`, `usuarios`), mantendo o código mais claro e fácil de entender.
+
+Em termos gerais, a ideia é:
+- **Listar os itens** (artigos, categorias, usuários) com dados falsos.
+- **Criar telas para cadastro e edição** desses itens.
+- **Simular navegação** entre essas telas, sem interagir com um banco de dados real, apenas utilizando dados fake.
+- **Organizar o projeto** de maneira que as telas e a estrutura do código fiquem bem divididas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

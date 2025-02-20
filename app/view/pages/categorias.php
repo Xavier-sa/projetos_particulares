@@ -19,10 +19,10 @@ include('../componentes/sidebar.php');
     <nav>
         
         <ul>
-            <li><a href="../pages/categorias/sistemas.php">Sistemas</a></li>
-            <li><a href="../pages/categorias/aplicativos.php">Aplicativos Web</a></li>
-            <li><a href="../pages/categorias/consultoria.php">Consultoria</a></li>
-            <li><a href="../pages/categorias/suporte_tecnico.php">Suporte Técnico</a></li>
+            <li><a href="<?php echo PGC_PATH; ?>sistemas.php">Sistemas</a></li>
+            <li><a href="<?php echo PGC_PATH; ?>aplicativos.php">Aplicativos Web</a></li>
+            <li><a href="<?php echo PGC_PATH; ?>consultoria.php">Consultoria</a></li>
+            <li><a href="<?php echo PGC_PATH; ?>suporte_tecnico.php">Suporte Técnico</a></li>
         </ul>
     </nav>
     
