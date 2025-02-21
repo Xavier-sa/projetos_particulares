@@ -1,0 +1,8 @@
+pyside6-uic login.ui -o login.py
+
+
+abrir - qt:
+bash 
+
+
+pyside6-designer

@@ -2,7 +2,7 @@ Destinado as aulas do professor mauricio senac:
 
 Desktop
 
-PS C:\xampp\htdocs> pip list
+PS C:\xampp\htdocs> 
 Package                Version
 ---------------------- -----------
 beautifulsoup4         4.12.3     
