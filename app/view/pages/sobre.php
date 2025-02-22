@@ -1,7 +1,7 @@
 <?php
-include('../../config/env.php');
-include('../componentes/navbar.php');
-include('../componentes/sidebar.php');
+require_once('../../config/env.php');
+require_once('../componentes/navbar.php');
+require_once('../componentes/sidebar.php');
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +39,6 @@ include('../componentes/sidebar.php');
         </section>
     </main>
 
-    <?php include('../componentes/footer.php'); ?>
+    <?php require_once('../componentes/footer.php'); ?>
 </body>
 </html>

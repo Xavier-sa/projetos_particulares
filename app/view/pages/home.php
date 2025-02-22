@@ -1,7 +1,7 @@
 <?php
-include('../../config/env.php');
-include('../componentes/navbar.php');
-include('../componentes/sidebar.php');
+require_once('../../config/env.php');
+require_once('../componentes/navbar.php');
+require_once('../componentes/sidebar.php');
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +11,8 @@ include('../componentes/sidebar.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xavier Solutions </title>   
     <link rel="stylesheet" href="<?php echo CSS_PATH; ?>style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 </head>
 <body>
     <!-- arquivo responsável pela tela Home -->
@@ -46,7 +48,9 @@ include('../componentes/sidebar.php');
     </main>
 
     <!-- rodapé -->
-    <?php include('../componentes/footer.php'); ?>
+
+   
+    <?php require_once('../componentes/footer.php'); ?>
 </body>
 </html>
 

@@ -2,9 +2,9 @@
 // Usando __DIR__ para garantir o caminho correto e seguro
 require_once(__DIR__ . '/../../../config/env.php');
 
-include('../../componentes/navbar.php');
+require_once('../../componentes/navbar.php');
 
-include('../../componentes/sidebar.php');  // Inclui a sidebar
+require_once('../../componentes/sidebar.php');  // Inclui a sidebar
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ include('../../componentes/sidebar.php');  // Inclui a sidebar
     
 </main>
 
-<?php include('../../componentes/footer.php'); ?>  
+<?php require_once('../../componentes/footer.php'); ?>  
 <script src="<?php echo JS_PATH; ?>rd.js"></script>  
 </body>
 </html>
