@@ -1,9 +1,9 @@
 <?php
-require_once('../../config/env.php');
-require_once('../componentes/navbar.php');
-require_once('../componentes/sidebar.php');
+require_once('../../../config/env.php');
+require_once('../../componentes/navbar.php');
+require_once('../../componentes/sidebar.php');
 
-require_once ('./dados.php');  /* testando */
+require_once ('../listar_lista.php');  /* testando */
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +43,6 @@ require_once ('./dados.php');  /* testando */
     </table>
 </main>
 
-<?php require_once('../componentes/footer.php'); ?>
+<?php require_once('../../componentes/footer.php'); ?>
 </body>
 </html>

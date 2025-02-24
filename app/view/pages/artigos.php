@@ -15,6 +15,14 @@ require_once('../componentes/sidebar.php');
 <body>
     <!-- Conteúdo principal da página -->
     <main class="content">
+    <h1>Artigos</h1>
+        <ul id="lista-artigos">
+            <!-- Lista de artigos será inserida aqui -->
+        </ul>
+
+        
+
+    <h2> </h2>
         <!-- <h1>Artigo sobre minha Trajetória</h1>
         <article>
             <p>Atualmente, sou colaborador da Solurb, onde comecei minha jornada como coletor. Essa função, embora operacional, me proporcionou um aprendizado valioso sobre rotas e aprimoramento das minhas habilidades de comunicação com diversos públicos. Após 9 meses, fui aprovado para a vaga de porteiro de ecoponto, onde atuei no ecoponto Nova Lima, prestando atendimento à comunidade, orientando sobre descartes e resolvendo conflitos.</p>
@@ -32,5 +40,6 @@ require_once('../componentes/sidebar.php');
     </main>
 
     <?php require_once('../componentes/footer.php'); ?>
+    <script src="<?php echo JS_PATH; ?>listar.js"></script> 
 </body>
 </html>
