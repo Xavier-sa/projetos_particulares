@@ -194,6 +194,7 @@ class CadastroWindow(QWidget):
             self.close()  # Fechar a janela de cadastro após salvar os dados
         except mysql.connector.Error as err:
             QMessageBox.critical(self, "Erro", f"Erro ao salvar no banco de dados: {err}")
+            
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

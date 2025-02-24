@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QDialog
-from perfil import Ui_Dialog  # Importa a interface gerada pelo Qt Designer
+from projeto.Globinho.perfil import Ui_Dialog  # Importa a interface gerada pelo Qt Designer
 
 class PerfilWindow(QDialog):
     def __init__(self, nome_usuario, life, ki, forca):
