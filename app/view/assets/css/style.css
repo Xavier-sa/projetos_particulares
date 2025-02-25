@@ -1,5 +1,9 @@
 @import url(reset.css);
 @import url(componentes.css);
+@import url(sidebar.css);
+@import url(navbar.css);
+@import url(footer.css);
+@import url(content.css);
 @import url(table.css);
 @import url(adm.css);
 @import url(sobre.css);
@@ -19,6 +23,10 @@
     direction: ltr;
 }
 
+
+a{
+    color:unset;  /* remove a cor dos links */
+}
 /* nesse arquivo: estilo pag. home */
 
 /* 

@@ -1,0 +1,21 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #BDC3C7; /*--- troquei cor  (purple) */
+
+
+    font-size: 35px;/* -------- */
+    line-height: 86px;/* -------- */
+    box-shadow: 4px 0px 12px rgb(0, 0, 0);
+
+    nav {
+        img {
+            width: 100%;
+            object-fit: contain;/* ---------*/
+        }
+
+        ul {
+
+        }
+    }
+}

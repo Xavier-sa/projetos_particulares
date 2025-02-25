@@ -1,78 +1,7 @@
 
-.navbar {
-    height: 68px;
-    width: calc(100vw - 200px);
-    position: fixed;
-    right: 0;
-    background-color: #2C3E50;  /* ----aquamarine---- */
-    
-    nav {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        height: 100%;
-
-        img {
-            height: 48px;
-            border-radius: 80%; /* -------- */
-            border: black;  /* -------- */
-           
-        }
-    }
-}
-
-.sidebar {
-    width: 200px;
-    height: 100vh;
-    background-color: #BDC3C7; /*--- troquei cor  (purple) */
 
 
-    font-size: 35px;/* -------- */
-    line-height: 86px;/* -------- */
 
-    nav {
-        img {
-            width: 100%;
-            object-fit: contain;/* ---------*/
-        }
-
-        ul {
-
-        }
-    }
-}
-
-.footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    height: 22px;
-    width: calc(100vw - 200px);
-    background-color: #2C3E50; /*--- troquei cor  (yellowgreen) */
-}
-
-.content {
-    
-    position: absolute;
-    right: 0;
-    top: 68px;
-    width: calc(100vw - 200px);
-    height: calc(100vh - 68px - 22px);
-    overflow: auto;
-
-    font-size: 26px;/* -------- */
-           
-    line-height: 37px;/* -------- */
-           
-    background-color: #ECF0F1; /*--- troquei cor  (blanchedalmond) */
-
-    
-       
-}
-p {
-            margin: 30px 0;
-            font-size: 24px;
-}
 
 
 /* Estilos de grid */

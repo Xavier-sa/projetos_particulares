@@ -5,9 +5,9 @@ require_once('../componentes/sidebar.php');
 
 // dados fake
 $usuarios = [
-    ['nome' => 'Broly', 'email' => 'Broly@email.com'],
-    ['nome' => 'Trunks', 'email' => 'Trunks@email.com'],
-    ['nome' => 'Yamcha', 'email' => 'Yamcha@email.com'],
+    // ['nome' => 'Broly', 'email' => 'Broly@email.com'],
+    // ['nome' => 'Trunks', 'email' => 'Trunks@email.com'],
+    // ['nome' => 'Yamcha', 'email' => 'Yamcha@email.com'],
     ['nome' => 'Vegeta', 'email' => 'vegeta@email.com']
 ];
 ?>
@@ -41,7 +41,7 @@ $usuarios = [
                         <td><?php echo $usuario['email']; ?></td>
                         <td>
                             <!-- Ações possíveis, como editar ou excluir -->
-                            <a href="#">Editar</a> | <a href="#">Excluir</a>
+                            <a href="#">Editar<span class="tooltip">Editar</span></a> | <a href="#"><span class="tooltip">Excluir</span>Excluir</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -53,3 +53,8 @@ $usuarios = [
     <?php require_once('../componentes/footer.php'); ?>
 </body>
 </html>
+
+
+
+
+

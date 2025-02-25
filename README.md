@@ -36,6 +36,32 @@ Em termos gerais, a ideia é:
 
 
 
+- 
+
+
+
+artigos 
+   id 
+   titulo 
+   contudo
+   categoria_id -> nome da cat
+   usuario_id ->  nome do user
+
+categorias
+   id
+   nome
+
+
+usuarios
+   id 
+   email
+   nome
+   cpf
+   nascimento
+
+
+
+
 
 
 
