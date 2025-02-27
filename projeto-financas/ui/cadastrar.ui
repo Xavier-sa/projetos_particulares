@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui version="4.0">
+ <class>CadastroWindow</class>
+ <widget class="QMainWindow" name="CadastroWindow">
+  <property name="geometry">
+   <rect>
+    <x>100</x>
+    <y>100</y>
+    <width>400</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastro de Usuário</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_nome">
+        <property name="text">
+         <string>Nome</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="nome"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_senha">
+        <property name="text">
+         <string>Senha</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="senha">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_salario">
+        <property name="text">
+         <string>Salário</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="salario">
+        <property name="validator">
+         <validator type="QIntValidator">
+          <property name="bottom">
+           <number>0</number>
+          </property>
+         </validator>
+        </property>
+       </widget>
+      </item>
+      <!-- Adicionar mais campos conforme necessário -->
+      <item row="9" column="1">
+       <widget class="QPushButton" name="cadastrar_btn">
+        <property name="text">
+         <string>Cadastrar</string>
+        </property>
+       </widget>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
