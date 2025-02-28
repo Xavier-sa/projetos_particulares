@@ -15,7 +15,7 @@ class CadastroWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Cadastro de Usuário")
-        self.setGeometry(100, 100, 400, 500)
+        self.setGeometry(100, 100, 400, 300)
 
         self.setWindowIcon(QIcon("images/icon.png")) 
        

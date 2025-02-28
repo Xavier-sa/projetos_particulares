@@ -13,59 +13,131 @@
   <property name="windowTitle">
    <string>Perfil do Usuário</string>
   </property>
-  <widget class="QLabel" name="label">
+
+  
+  <widget class="QLabel" name="label_nome">
    <property name="geometry">
     <rect>
      <x>50</x>
      <y>20</y>
-     <width>100</width>
+     <width>150</width>
      <height>16</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: red;
-font: bold 14px;
-</string>
+    <string notr="true">color: blue; font: bold 14px;</string>
    </property>
    <property name="text">
-    <string>Usuário:</string>
-   </property>
-   <property name="textFormat">
-    <enum>Qt::TextFormat::AutoText</enum>
+    <string>Bem-vindo, Usuário!</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_username">
+
+  
+  <widget class="QLabel" name="label_salario">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>20</y>
-     <width>200</width>
+     <x>50</x>
+     <y>60</y>
+     <width>150</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>Salário: </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_life">
+
+  <widget class="QLabel" name="label_despesa">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>310</y>
-     <width>49</width>
+     <x>50</x>
+     <y>100</y>
+     <width>150</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Life:</string>
+    <string>Despesa: </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_life_value">
+
+  <widget class="QLabel" name="label_investimentos">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>140</y>
+     <width>150</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Investimentos: </string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="label_rendaextra">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>180</y>
+     <width>150</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Renda Extra: </string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="label_veiculos">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>220</y>
+     <width>150</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Veículos: </string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="label_gasolina">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>260</y>
+     <width>150</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Gasolina: </string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="label_cursos">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>300</y>
+     <width>150</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cursos: </string>
+   </property>
+  </widget>
+
+  
+  <widget class="QLabel" name="label_salario_value">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>60</y>
-     <width>100</width>
+     <width>150</width>
      <height>16</height>
     </rect>
    </property>
@@ -73,25 +145,13 @@ font: bold 14px;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_ki">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>350</y>
-     <width>49</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Ki:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_ki_value">
+
+  <widget class="QLabel" name="label_despesa_value">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>100</y>
-     <width>100</width>
+     <width>150</width>
      <height>16</height>
     </rect>
    </property>
@@ -99,25 +159,13 @@ font: bold 14px;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_forca">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>390</y>
-     <width>261</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Força:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_forca_value">
+
+  <widget class="QLabel" name="label_investimentos_value">
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>150</y>
-     <width>100</width>
+     <y>140</y>
+     <width>150</width>
      <height>16</height>
     </rect>
    </property>
@@ -125,44 +173,78 @@ font: bold 14px;
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+
+  <widget class="QLabel" name="label_rendaextra_value">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>570</y>
-     <width>75</width>
-     <height>24</height>
+     <x>150</x>
+     <y>180</y>
+     <width>150</width>
+     <height>16</height>
     </rect>
-   </property>
-   <property name="text">
-    <string>Voltar</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>50</y>
-     <width>221</width>
-     <height>181</height>
-    </rect>
-   </property>
-   <property name="inputMethodHints">
-    <set>Qt::InputMethodHint::ImhUppercaseOnly</set>
    </property>
    <property name="text">
     <string/>
    </property>
-   <property name="pixmap">
-    <pixmap>../images/joagdo.PNG</pixmap>
+  </widget>
+
+  <widget class="QLabel" name="label_veiculos_value">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>220</y>
+     <width>150</width>
+     <height>16</height>
+    </rect>
    </property>
-   <property name="margin">
-    <number>0</number>
-   </property>
-   <property name="indent">
-    <number>-4</number>
+   <property name="text">
+    <string/>
    </property>
   </widget>
+
+  <widget class="QLabel" name="label_gasolina_value">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>260</y>
+     <width>150</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="label_cursos_value">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>300</y>
+     <width>150</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+
+  
+  <widget class="QPushButton" name="btn_fechar">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>550</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fechar</string>
+   </property>
+  </widget>
+
  </widget>
  <resources/>
  <connections/>
