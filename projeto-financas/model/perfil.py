@@ -12,6 +12,9 @@ class PerfilWindow(QMainWindow):
         self.setWindowTitle("Perfil do Usuário")
         self.setGeometry(100, 100, 400, 500)
 
+
+        self.setWindowIcon(QIcon("images/icon.png"))  # Altere o caminho para o seu ícone
+
         # Widget central
         self.widget = QWidget()
         self.setCentralWidget(self.widget)
@@ -26,7 +29,7 @@ class PerfilWindow(QMainWindow):
         layout.addWidget(self.label_nome)
 
         # Exibir as informações cadastradas
-        self.label_salario = QLabel(f"Salário: {self.user_data['salario']} " "style: color: #0000FF;")
+        self.label_salario = QLabel(f"Salário: {self.user_data['salario']} ")
         self.label_despesa = QLabel(f"Despesa: {self.user_data['despesa']}")
         self.label_investimentos = QLabel(f"Investimentos: {self.user_data['investimentos']}")
         self.label_rendaextra = QLabel(f"Renda Extra: {self.user_data['rendaextra']}")

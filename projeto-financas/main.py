@@ -56,6 +56,9 @@ class LoginApp(QMainWindow):
 
         cursor.close()
         conn.close()
+        
+
+    
 
 # Inicializa o aplicativo
 if __name__ == "__main__":

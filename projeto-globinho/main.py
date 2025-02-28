@@ -4,6 +4,7 @@ import mysql.connector
 from model.login import Ui_Login  
 from model.status import Ui_atribuir_pontos  
 from model.perfil import Ui_Perfil_usuario  
+from model.cadastro import Ui_Cadastro
 
 class LoginApp(QMainWindow):
     def __init__(self):
@@ -46,12 +47,70 @@ class LoginApp(QMainWindow):
             self.user_id, self.username = user  # Armazena ID e Nome
             QMessageBox.information(self, "Login", "Login bem-sucedido!")
             self.close()
-            self.show_status_window()
+            self.cadastrar_usuario()
         else:
             QMessageBox.warning(self, "Erro", "Usuário ou senha incorretos!")
 
         cursor.close()
         conn.close()
+
+    def cadastrar_usuario(self):
+        """Método para cadastrar o novo usuário"""
+        
+        # Cria uma instância de Ui_Cadastro
+        self.cadastro_window = QDialog(self)  # Cria uma nova janela de cadastro
+        self.cadastro_ui = Ui_Cadastro()  # Cria uma instância de Ui_Cadastro
+        self.cadastro_ui.setupUi(self.cadastro_window)  # Configura a interface de cadastro
+
+        # Conectar o botão de cadastro à lógica
+        self.cadastro_ui.pushButton.clicked.connect(self.realizar_cadastro)
+
+        self.cadastro_window.show()
+
+    def realizar_cadastro(self):
+        """Realiza o cadastro do novo usuário"""
+        
+        # Obtém os dados do formulário
+        nome_usuario = self.cadastro_ui.lineEdit_2.text()  # Nome de usuário
+        senha = self.cadastro_ui.lineEdit_3.text()  # Senha
+        senha_confirmada = self.cadastro_ui.lineEdit_4.text()  # Confirmação de senha
+        servidor = self.cadastro_ui.lineEdit_5.text()  # Servidor
+        classe = self.cadastro_ui.lineEdit_6.text()  # Classe
+        life = self.cadastro_ui.lineEdit_8.text()  # Life
+        ki = self.cadastro_ui.lineEdit_10.text()  # Ki
+        forca = self.cadastro_ui.lineEdit_11.text()  # Força
+
+        # Verifica se as senhas coincidem
+        if senha != senha_confirmada:
+            QMessageBox.warning(self.cadastro_window, "Erro", "As senhas não coincidem!")
+            return
+
+        conn = self.connect_db()
+        if conn is None:
+            return
+
+        cursor = conn.cursor()
+        
+        # Inserir o usuário na tabela 'users'
+        query_usuario = "INSERT INTO users (username, password, nome) VALUES (%s, %s, %s)"
+        cursor.execute(query_usuario, (nome_usuario, senha, nome_usuario))  # Aqui 'nome_usuario' é usado para nome
+
+        user_id = cursor.lastrowid  # Obtém o ID do usuário recém-inserido
+
+        # Inserir o status do usuário na tabela 'status_info'
+        query_status = """
+        INSERT INTO status_info (user_id, life, ki, forca, servidor, classe)
+        VALUES (%s, %s, %s, %s, %s, %s)
+        """
+        cursor.execute(query_status, (user_id, life, ki, forca, servidor, classe))
+        
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+        QMessageBox.information(self.cadastro_window, "Sucesso", "Usuário cadastrado com sucesso!")
+        self.cadastro_window.close()  # Fecha a tela de cadastro
+        self.show_status_window()  # Chama a tela de status
 
     def show_status_window(self):
         """Abre a tela de Status"""

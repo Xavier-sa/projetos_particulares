@@ -1,0 +1,276 @@
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'cadastroEMeJsA.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.2
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QLabel,
+    QLineEdit, QPushButton, QSizePolicy, QWidget)
+
+class Ui_Cadastro(object):
+    def setupUi(self, Cadastro):
+        if not Cadastro.objectName():
+            Cadastro.setObjectName(u"Cadastro")
+        Cadastro.resize(385, 640)
+        self.lineEdit_2 = QLineEdit(Cadastro)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.lineEdit_2.setGeometry(QRect(10, 200, 221, 21))
+        self.label = QLabel(Cadastro)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(10, 10, 361, 151))
+        self.label.setStyleSheet(u"alternate-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));border-radius: 10px;")
+        self.label.setPixmap(QPixmap(u"../images/teste.PNG"))
+        self.label_2 = QLabel(Cadastro)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(50, 20, 311, 51))
+        font = QFont()
+        font.setPointSize(14)
+        font.setBold(True)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet(u"border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));")
+        self.label_3 = QLabel(Cadastro)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(10, 180, 131, 16))
+        self.lineEdit_3 = QLineEdit(Cadastro)
+        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.lineEdit_3.setGeometry(QRect(10, 250, 221, 21))
+        self.lineEdit_4 = QLineEdit(Cadastro)
+        self.lineEdit_4.setObjectName(u"lineEdit_4")
+        self.lineEdit_4.setGeometry(QRect(10, 310, 221, 21))
+        self.label_6 = QLabel(Cadastro)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(10, 340, 131, 16))
+        self.lineEdit_5 = QLineEdit(Cadastro)
+        self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.lineEdit_5.setGeometry(QRect(10, 360, 221, 21))
+        self.lineEdit_6 = QLineEdit(Cadastro)
+        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.lineEdit_6.setGeometry(QRect(10, 420, 221, 21))
+        self.label_7 = QLabel(Cadastro)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setGeometry(QRect(10, 400, 131, 16))
+        self.frame = QFrame(Cadastro)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(0, 0, 381, 621))
+        self.frame.setStyleSheet(u"background-color: rgb(170, 170, 127);")
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.label_4 = QLabel(self.frame)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(10, 230, 131, 16))
+        self.label_5 = QLabel(self.frame)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(10, 290, 131, 16))
+        self.label_8 = QLabel(self.frame)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setGeometry(QRect(10, 470, 49, 16))
+        self.pushButton = QPushButton(self.frame)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(260, 580, 75, 24))
+        self.lineEdit_8 = QLineEdit(self.frame)
+        self.lineEdit_8.setObjectName(u"lineEdit_8")
+        self.lineEdit_8.setGeometry(QRect(130, 470, 61, 21))
+        self.lineEdit_8.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label_9 = QLabel(self.frame)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setGeometry(QRect(110, 470, 21, 16))
+        self.label_10 = QLabel(self.frame)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(210, 470, 41, 20))
+        self.lineEdit_10 = QLineEdit(self.frame)
+        self.lineEdit_10.setObjectName(u"lineEdit_10")
+        self.lineEdit_10.setGeometry(QRect(30, 470, 61, 21))
+        self.lineEdit_10.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.lineEdit_11 = QLineEdit(self.frame)
+        self.lineEdit_11.setObjectName(u"lineEdit_11")
+        self.lineEdit_11.setGeometry(QRect(250, 470, 61, 21))
+        self.lineEdit_11.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.frame.raise_()
+        self.lineEdit_2.raise_()
+        self.label.raise_()
+        self.label_2.raise_()
+        self.label_3.raise_()
+        self.lineEdit_3.raise_()
+        self.lineEdit_4.raise_()
+        self.label_6.raise_()
+        self.lineEdit_5.raise_()
+        self.lineEdit_6.raise_()
+        self.label_7.raise_()
+
+        self.retranslateUi(Cadastro)
+
+        QMetaObject.connectSlotsByName(Cadastro)
+    # setupUi
+
+    def retranslateUi(self, Cadastro):
+        Cadastro.setWindowTitle(QCoreApplication.translate("Cadastro", u"Dialog", None))
+        self.lineEdit_2.setText(QCoreApplication.translate("Cadastro", u"Informe seu nome de usuario", None))
+        self.label.setText("")
+        self.label_2.setText(QCoreApplication.translate("Cadastro", u"Registre-se!", None))
+        self.label_3.setText(QCoreApplication.translate("Cadastro", u"Nome (usuario)", None))
+        self.lineEdit_3.setText(QCoreApplication.translate("Cadastro", u"Informe sua senha", None))
+        self.lineEdit_4.setText(QCoreApplication.translate("Cadastro", u"Confirme sua Senha", None))
+        self.label_6.setText(QCoreApplication.translate("Cadastro", u" Servidor", None))
+        self.lineEdit_5.setText(QCoreApplication.translate("Cadastro", u"Informe Servidor Desejado", None))
+        self.lineEdit_6.setText(QCoreApplication.translate("Cadastro", u"Informe Classe", None))
+        self.label_7.setText(QCoreApplication.translate("Cadastro", u"Classe", None))
+        self.label_4.setText(QCoreApplication.translate("Cadastro", u"Senha", None))
+        self.label_5.setText(QCoreApplication.translate("Cadastro", u"Confirme sua Senha", None))
+        self.label_8.setText(QCoreApplication.translate("Cadastro", u"Life ", None))
+        self.pushButton.setText(QCoreApplication.translate("Cadastro", u"Cadastrar", None))
+        self.lineEdit_8.setText("")
+        self.label_9.setText(QCoreApplication.translate("Cadastro", u"KI", None))
+        self.label_10.setText(QCoreApplication.translate("Cadastro", u"For\u00e7a", None))
+        self.lineEdit_10.setText("")
+        self.lineEdit_11.setText("")
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'cadastroOIEuus.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.2
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QLabel,
+    QLineEdit, QPushButton, QSizePolicy, QWidget)
+
+class Ui_Cadastro(object):
+    def setupUi(self, Cadastro):
+        if not Cadastro.objectName():
+            Cadastro.setObjectName(u"Cadastro")
+        Cadastro.resize(385, 640)
+        self.lineEdit_2 = QLineEdit(Cadastro)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.lineEdit_2.setGeometry(QRect(10, 200, 221, 21))
+        self.label = QLabel(Cadastro)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(10, 10, 361, 151))
+        self.label.setStyleSheet(u"alternate-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));border-radius: 10px;")
+        self.label.setPixmap(QPixmap(u"../images/teste.PNG"))
+        self.label_2 = QLabel(Cadastro)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(50, 20, 311, 51))
+        font = QFont()
+        font.setPointSize(14)
+        font.setBold(True)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet(u"border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));")
+        self.label_3 = QLabel(Cadastro)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(10, 180, 131, 16))
+        self.lineEdit_3 = QLineEdit(Cadastro)
+        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.lineEdit_3.setGeometry(QRect(10, 250, 221, 21))
+        self.lineEdit_4 = QLineEdit(Cadastro)
+        self.lineEdit_4.setObjectName(u"lineEdit_4")
+        self.lineEdit_4.setGeometry(QRect(10, 310, 221, 21))
+        self.label_6 = QLabel(Cadastro)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(10, 340, 131, 16))
+        self.lineEdit_5 = QLineEdit(Cadastro)
+        self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.lineEdit_5.setGeometry(QRect(10, 360, 221, 21))
+        self.lineEdit_6 = QLineEdit(Cadastro)
+        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.lineEdit_6.setGeometry(QRect(10, 420, 221, 21))
+        self.label_7 = QLabel(Cadastro)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setGeometry(QRect(10, 400, 131, 16))
+        self.frame = QFrame(Cadastro)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(0, 0, 381, 621))
+        self.frame.setStyleSheet(u"background-color: rgb(170, 170, 127);")
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.label_4 = QLabel(self.frame)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(10, 230, 131, 16))
+        self.label_5 = QLabel(self.frame)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(10, 290, 131, 16))
+        self.label_8 = QLabel(self.frame)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setGeometry(QRect(10, 470, 49, 16))
+        self.pushButton = QPushButton(self.frame)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(260, 580, 75, 24))
+        self.lineEdit_8 = QLineEdit(self.frame)
+        self.lineEdit_8.setObjectName(u"lineEdit_8")
+        self.lineEdit_8.setGeometry(QRect(130, 470, 61, 21))
+        self.lineEdit_8.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label_9 = QLabel(self.frame)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setGeometry(QRect(110, 470, 21, 16))
+        self.label_10 = QLabel(self.frame)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(210, 470, 41, 20))
+        self.lineEdit_10 = QLineEdit(self.frame)
+        self.lineEdit_10.setObjectName(u"lineEdit_10")
+        self.lineEdit_10.setGeometry(QRect(30, 470, 61, 21))
+        self.lineEdit_10.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.lineEdit_11 = QLineEdit(self.frame)
+        self.lineEdit_11.setObjectName(u"lineEdit_11")
+        self.lineEdit_11.setGeometry(QRect(250, 470, 61, 21))
+        self.lineEdit_11.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.frame.raise_()
+        self.lineEdit_2.raise_()
+        self.label.raise_()
+        self.label_2.raise_()
+        self.label_3.raise_()
+        self.lineEdit_3.raise_()
+        self.lineEdit_4.raise_()
+        self.label_6.raise_()
+        self.lineEdit_5.raise_()
+        self.lineEdit_6.raise_()
+        self.label_7.raise_()
+
+        self.retranslateUi(Cadastro)
+
+        QMetaObject.connectSlotsByName(Cadastro)
+    # setupUi
+
+    def retranslateUi(self, Cadastro):
+        Cadastro.setWindowTitle(QCoreApplication.translate("Cadastro", u"Dialog", None))
+        self.lineEdit_2.setText("")
+        self.label.setText("")
+        self.label_2.setText(QCoreApplication.translate("Cadastro", u"Registre-se!", None))
+        self.label_3.setText(QCoreApplication.translate("Cadastro", u"Nome (usuario)", None))
+        self.lineEdit_3.setText("")
+        self.lineEdit_4.setText("")
+        self.label_6.setText(QCoreApplication.translate("Cadastro", u" Servidor", None))
+        self.lineEdit_5.setText("")
+        self.lineEdit_6.setText("")
+        self.label_7.setText(QCoreApplication.translate("Cadastro", u"Classe", None))
+        self.label_4.setText(QCoreApplication.translate("Cadastro", u"Senha", None))
+        self.label_5.setText(QCoreApplication.translate("Cadastro", u"Confirme sua Senha", None))
+        self.label_8.setText(QCoreApplication.translate("Cadastro", u"Life ", None))
+        self.pushButton.setText(QCoreApplication.translate("Cadastro", u"Cadastrar", None))
+        self.lineEdit_8.setText("")
+        self.label_9.setText(QCoreApplication.translate("Cadastro", u"KI", None))
+        self.label_10.setText(QCoreApplication.translate("Cadastro", u"For\u00e7a", None))
+        self.lineEdit_10.setText("")
+        self.lineEdit_11.setText("")
+    # retranslateUi
+

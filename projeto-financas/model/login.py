@@ -27,7 +27,7 @@ class Ui_Login(object):
         Login.resize(678, 513)
         self.layoutWidget = QWidget(Login)
 
-        # self.setWindowIcon(QIcon("images/icon.png"))
+        Login.setWindowIcon(QIcon("images/icon.png"))  # Altere o caminho para o seu ícone
         self.layoutWidget.setObjectName(u"layoutWidget")
         self.layoutWidget.setGeometry(QRect(20, 30, 642, 408))
         self.gridLayout = QGridLayout(self.layoutWidget)

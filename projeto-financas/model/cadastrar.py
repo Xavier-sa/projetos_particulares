@@ -17,9 +17,8 @@ class CadastroWindow(QMainWindow):
         self.setWindowTitle("Cadastro de Usuário")
         self.setGeometry(100, 100, 400, 500)
 
-
-         # Definir o ícone da janela
-        # self.setWindowIcon(QIcon("images/icon.png"))  # Caminho para o ícone
+        self.setWindowIcon(QIcon("images/icon.png")) 
+       
 
         self.widget = QWidget()
         self.setCentralWidget(self.widget)
