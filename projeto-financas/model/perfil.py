@@ -2,6 +2,68 @@ from PySide6.QtWidgets import (
     QMainWindow, QVBoxLayout, QLabel, QWidget, QPushButton
 )
 from PySide6.QtGui import QIcon
+from .encerrar import Encerrar
+
+STYLE = """
+QWidget {
+    background-color: #222222;
+    color: #FFD700;
+    font-family: 'Saiyan Sans', Arial, sans-serif;
+}
+
+QLabel {
+    color: #F57C00;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+QLineEdit {
+    background-color: #333333;
+    color: #FFD700;
+    border: 2px solid #F57C00;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+QPushButton {
+    background-color: #1976D2;
+    color: #FFFFFF;
+    border: 2px solid #F57C00;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+QPushButton:hover {
+    background-color: #F57C00;
+    color: #222222;
+    border-color: #FFD700;
+}
+
+QPushButton:pressed {
+    background-color: #D84315;
+}
+
+QLineEdit:focus {
+    border: 2px solid #FFD700;
+}
+
+QMessageBox {
+    background-color: #222222;
+    color: #FFD700;
+    font-size: 16px;
+}
+"""
+
+
+
+
 class PerfilWindow(QMainWindow):
     def __init__(self, user_id, username, user_data):
         super().__init__()
@@ -23,6 +85,7 @@ class PerfilWindow(QMainWindow):
 
         # Layout principal
         layout = QVBoxLayout()
+        self.setStyleSheet(STYLE)  
 
         # Exibir o nome do usuário
         self.label_nome = QLabel(f"Bem-vindo, {self.username}!")
@@ -54,6 +117,19 @@ class PerfilWindow(QMainWindow):
 
         # Definir o layout no widget
         self.widget.setLayout(layout)
+
+         # Botão para abrir a tela de "Encerrar"
+        self.btn_encerrar = QPushButton("Encerrar")
+        self.btn_encerrar.clicked.connect(self.abrir_tela_encerrar)
+        layout.addWidget(self.btn_encerrar)
+
+        # Definir o layout no widget
+        self.widget.setLayout(layout)
+
+    def abrir_tela_encerrar(self):
+        """Abre a tela de encerramento com o GIF"""
+        self.encerrar_window = Encerrar()
+        self.encerrar_window.show()
 
 
 

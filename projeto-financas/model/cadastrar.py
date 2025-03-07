@@ -11,6 +11,66 @@ from PySide6.QtWidgets import (
 # Importação relativa
 from .perfil import PerfilWindow
 
+STYLE = """
+QWidget {
+    background-color: #222222;
+    color: #FFD700;
+    font-family: 'Saiyan Sans', Arial, sans-serif;
+}
+
+QLabel {
+    color: #F57C00;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+QLineEdit {
+    background-color: #333333;
+    color: #FFD700;
+    border: 2px solid #F57C00;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+QPushButton {
+    background-color: #1976D2;
+    color: #FFFFFF;
+    border: 2px solid #F57C00;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+QPushButton:hover {
+    background-color: #F57C00;
+    color: #222222;
+    border-color: #FFD700;
+}
+
+QPushButton:pressed {
+    background-color: #D84315;
+}
+
+QLineEdit:focus {
+    border: 2px solid #FFD700;
+}
+
+QMessageBox {
+    background-color: #222222;
+    color: #FFD700;
+    font-size: 16px;
+}
+"""
+
+
+
+
 class CadastroWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -33,6 +93,10 @@ class CadastroWindow(QMainWindow):
         self.senha = QLineEdit()
         self.senha.setEchoMode(QLineEdit.Password)
         
+
+
+        self.setStyleSheet(STYLE)  
+
         self.salario = QLineEdit()
         self.salario.setValidator(QIntValidator())  # Validador para números inteiros
         self.despesa = QLineEdit()
