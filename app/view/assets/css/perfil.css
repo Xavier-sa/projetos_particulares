@@ -1,0 +1,47 @@
+/* perfil.css */
+
+/* Estilização da imagem de perfil */
+.profile-img {
+    width: 270px;  /* Tamanho da imagem */
+    height: 380px; /* Tamanho da imagem */
+    border-radius: 55%;  /* Torna a imagem circular */
+    margin-bottom: 20px;  /* Espaço abaixo da imagem */
+}
+
+/* Container para a seção "Sobre Mim" */
+.container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Título da seção "Sobre Mim" */
+h2 {
+    font-size: 28px;
+    color: #1e90ff; /* Azul chamativo */
+    margin-bottom: 15px;
+}
+
+/* Descrição sobre o desenvolvedor */
+p {
+    font-size: 18px;
+    color: #00bfff;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Estilos para a lista de habilidades */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Espaçamento entre as habilidades */
+}
+
+ul li {
+    background-color: #333;
+    color: #00bfff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}

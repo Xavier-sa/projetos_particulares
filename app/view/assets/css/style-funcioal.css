@@ -1,0 +1,99 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização do corpo */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1e90ff; /* Azul chamativo */
+}
+
+/* Estilização da lista de projetos */
+#lista-projetos {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Cada item da lista */
+#lista-projetos li {
+    background: #1e1e1e;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.3s;
+}
+
+/* Link dos projetos */
+#lista-projetos li a {
+    text-decoration: none;
+    color: #00bfff; /* Azul claro */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse */
+#lista-projetos li:hover {
+    transform: scale(1.05);
+    background: #292929;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 20px;
+    }
+    
+    #lista-projetos li {
+        padding: 12px;
+    }
+
+    #lista-projetos li a {
+        font-size: 16px;
+    }
+}
+
+
+#lista-formacao {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Cada item da lista */
+#lista-formacao li {
+    background: #1e1e1e;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.3s;
+}
+
+/* Link dos cursos */
+#lista-formacao li a {
+    text-decoration: none;
+    color: #00bfff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse */
+#lista-formacao li:hover {
+    transform: scale(1.05);
+    background: #292929;
+}

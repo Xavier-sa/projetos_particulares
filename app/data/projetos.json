@@ -1,0 +1,76 @@
+{
+    "projetos": [
+        {
+            "nome": "GitHub",
+            "link": "https://xavier-sa.github.io"
+        },
+        {
+            "nome": "Catálogo de Filmes (Praticando)",
+            "link": "http://catalogofilmes.rf.gd/"
+        },
+        {
+            "nome": "Tradutor (Unindo Front e Backend)",
+            "link": "https://projetotradutor.onrender.com"
+        },
+        {
+            "nome": "W3School Perfil",
+            "link": "https://profile.w3profile.com/w.xavier.7"
+          }
+    
+    ],
+    "projetos_em_alteracao": [ 
+      {
+        "nome": "Página Profissional Psicóloga",
+        "link": "https://darapsicologa.pages.dev"
+      },
+      {
+        "nome": "Treinamento Básico",
+        "link": "https://treinamentobasico.pages.dev"
+      },
+      {
+        "nome": "Página Mercearia/Conveniência",
+        "link": "https://brazmix.pages.dev"
+      },
+      {
+        "nome": "GitHub",
+        "link": "https://xavier-sa.github.io"
+      },
+      {
+        "nome": "W3School Perfil",
+        "link": "https://profile.w3profile.com/w.xavier.7"
+      },
+      {
+        "nome": "Verificar Folgas de Plantonistas",
+        "link": "https://verificarfolga12x36.pages.dev"
+      },
+      {
+        "nome": "Lista de Notebook",
+        "link": "https://notebooksala.pages.dev"
+      },
+      {
+        "nome": "Contador de Moedas",
+        "link": "https://calcularmoedas.pages.dev"
+      },
+      {
+        "nome": "Gerar Planilhas Simples",
+        "link": "https://tabelaspre.pages.dev"
+      },
+      {
+        "nome": "Aprovado/Reprovado",
+        "link": "https://mediafinal.pages.dev"
+      },
+      {
+        "nome": "Resolver Problema de Medicação",
+        "link": "https://aplicarmedicacao.pages.dev"
+      },
+      {
+        "nome": "Catálogo de Filmes (Praticando)",
+        "link": "http://catalogofilmes.rf.gd/"
+      },
+      {
+        "nome": "Tradutor (Unindo Front e Backend)",
+        "link": "https://projetotradutor.onrender.com"
+      }
+    ]
+  }
+  

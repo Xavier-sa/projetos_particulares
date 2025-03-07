@@ -1,0 +1,18 @@
+{
+    "perfil": {
+      "imagem": "../img/perfil/perfil.jpeg",  
+      "nome": "Wellington",
+      "profissao": "Desenvolvedor Web",
+      "habilidades": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python",
+        "PHP",
+        "C#",
+        "MySQL"
+      ],
+      "descricao": "Oi, sou o Wellington. Trabalho como desenvolvedor web e tenho experiência com HTML, CSS, JavaScript e Python. Adoro criar soluções criativas e práticas para meus clientes."
+    }
+  }
+  

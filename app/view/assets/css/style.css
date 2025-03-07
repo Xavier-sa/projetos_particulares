@@ -1,0 +1,31 @@
+@import url('formacao.css');
+@import url('projetos.css');
+@import url('perfil.css');
+@import url('responsivo.css');  /* Opcional, se estiver usando */
+
+
+/* style.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização do corpo */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1e90ff; /* Azul chamativo */
+}
+
