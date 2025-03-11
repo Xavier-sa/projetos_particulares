@@ -1,52 +1,42 @@
--- Tabela para armazenar marcas de carros
-CREATE TABLE marcas (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(50) NOT NULL UNIQUE
-);
+-- Criação do banco de dados
+CREATE DATABASE IF NOT EXISTS aula_db;
 
--- Tabela para armazenar informações dos carros
-CREATE TABLE carros (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    placa VARCHAR(7) NOT NULL UNIQUE,
-    marca_id INT NOT NULL,
-    modelo VARCHAR(50),
-    ano INT,
-    FOREIGN KEY (marca_id) REFERENCES marcas(id)
-);
-
--- Tabela de controle de entrada e saída de veículos
-CREATE TABLE controle_entrada_saida (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome_aluno VARCHAR(255) NOT NULL,
-    placa_veiculo VARCHAR(7) NOT NULL,
-    matricula_motorista_saida VARCHAR(50) NOT NULL,
-    km_veiculo_saida INT NOT NULL,
-    hora_saida TIME NOT NULL,
-    matricula_motorista_entrada VARCHAR(50) NOT NULL,
-    km_veiculo_entrada INT NOT NULL,
-    hora_entrada TIME NOT NULL,
-    data DATE NOT NULL,
-    FOREIGN KEY (placa_veiculo) REFERENCES carros(placa),
-    CONSTRAINT placa_veiculo_unico UNIQUE (placa_veiculo, data)
-);
-
--- Inserção de exemplo na tabela marcas
-INSERT INTO marcas(nome) VALUES('Chevrolet');
-
-
-
+-- Seleção do banco de dados para uso
 USE aula_db;
 
-CREATE TABLE registros (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome_aluno VARCHAR(100),
-    placa_veiculo VARCHAR(20),
-    matricula_saida VARCHAR(50),
-    km_saida INT,
-    hora_saida TIME,
-    matricula_entrada VARCHAR(50),
-    km_entrada INT,
-    hora_entrada TIME,
-    data_registro DATE
+-- Tabela para armazenar as marcas de veículos
+-- Tabela para armazenar as marcas de veículos
+CREATE TABLE marcas (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,  -- Identificador único para cada marca
+    nome VARCHAR(50) NOT NULL  -- Nome da marca do veículo
+);
+
+
+-- Inserção de uma marca exemplo
+INSERT INTO marcas(nome) VALUES('Chevrolet');
+
+-- Tabela para armazenar as informações de carros
+CREATE TABLE carros (
+    placa VARCHAR(7) NOT NULL UNIQUE PRIMARY KEY,
+    marca VARCHAR(50) NOT NULL, 
+    modelo VARCHAR(50),
+    ano INT
+);
+
+-- Tabela para armazenar informações de pessoas (motoristas)
+CREATE TABLE pessoas (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE
+);
+
+-- Tabela para representar a relação entre motoristas e carros
+CREATE TABLE motoristas_carros (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_pessoa INT NOT NULL,
+    placa_carro VARCHAR(7) NOT NULL,
+    data_conducao DATE NOT NULL,
+    FOREIGN KEY (id_pessoa) REFERENCES pessoas(id),
+    FOREIGN KEY (placa_carro) REFERENCES carros(placa)
 );
 
