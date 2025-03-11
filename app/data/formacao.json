@@ -9,6 +9,11 @@
         "curso": "Cursando Desenvolvimento de Sistemas",
         "instituicao": "Senac MS",
         "link": "https://ww3.ms.senac.br"
+      },
+      {
+        "curso": "Tutoriais",
+        "instituicao":"W3Schools",
+        "link": "https://profile.w3profile.com/w.xavier.7"
       }
     ]
   }

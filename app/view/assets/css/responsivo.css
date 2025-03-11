@@ -1,16 +1,68 @@
-/* responsivo.css */
-
 /* Responsividade */
 @media (max-width: 768px) {
+    /* Ajuste do tamanho do título */
     h2 {
-        font-size: 20px;
+        font-size: 22px; /* Tamanho maior para facilitar a leitura em telas pequenas */
+        line-height: 1.3; /* Melhor espaçamento entre as linhas */
     }
 
+    /* Ajuste dos itens das listas */
     #lista-projetos li, #lista-formacao li {
-        padding: 12px;
+        padding: 10px; /* Ajuste no padding para dar mais espaço */
+        font-size: 14px; /* Fontes um pouco menores para facilitar a leitura */
+        line-height: 1.6; /* Aumentar a altura da linha para uma leitura mais confortável */
     }
 
+    /* Links dentro das listas */
     #lista-projetos li a, #lista-formacao li a {
-        font-size: 16px;
+        font-size: 16px; /* Ajuste para o texto não ficar tão pequeno */
+        text-decoration: none; /* Remover sublinhado para um design mais limpo */
+        color: #333; /* Melhor contraste de cor */
+        display: block; /* Deixar o link ocupar o tamanho completo do item da lista */
+        padding: 8px 0; /* Aumentar o padding para tornar o link mais fácil de clicar */
+    }
+
+    /* Ajuste do conteúdo principal */
+    main.content {
+        padding: 15px; /* Mais espaço nas bordas para os conteúdos */
+        font-size: 16px; /* Fonte maior para facilitar a leitura */
+        line-height: 1.6; /* Maior espaçamento entre linhas de texto */
+    }
+
+    /* Ajuste para o título principal */
+    h1 {
+        font-size: 26px; /* Tamanho maior para ser mais visível */
+        margin-bottom: 10px; /* Aumentar o espaço entre o título e o texto */
+    }
+
+    /* Links */
+    a {
+        font-size: 18px; /* Fonte maior para melhorar a leitura */
+        padding: 8px 16px; /* Aumentar a área clicável */
+        display: inline-block; /* Deixa o link mais "clicável" */
+        border-radius: 4px; /* Bordas arredondadas para um estilo mais moderno */
+        background-color: #007bff; /* Cor de fundo mais destacada */
+        color: #fff; /* Cor do texto no link */
+        text-align: center; /* Centraliza o texto no botão */
+        text-decoration: none; /* Remove o sublinhado */
+        margin-top: 15px; /* Adiciona um pouco de espaçamento entre o texto e o link */
+    }
+
+    /* Adiciona uma responsividade para as imagens */
+    img {
+        max-width: 100%; /* Garante que as imagens se ajustem ao tamanho da tela */
+        height: auto; /* Mantém a proporção das imagens */
+    }
+
+    /* Melhorando a visibilidade da barra de navegação e sidebar em telas pequenas */
+    #navbar, #sidebar {
+        display: none; /* Esconde a navegação e sidebar em dispositivos pequenos (opcional) */
+    }
+
+    /* Ajuste do footer */
+    footer {
+        font-size: 14px; /* Tamanho de fonte mais legível no rodapé */
+        text-align: center; /* Centraliza o texto no rodapé */
+        padding: 15px 0; /* Espaçamento no rodapé */
     }
 }
