@@ -1,12 +1,13 @@
 create database if not  exists aula_db;
-
-use aula_db;
 -- aqui da maneira do professor thiago
-create table marcas (
-	id int  auto_increment primary key,
-	nome varchar(50) not null	
-);
 
+
+USE aula_db;
+
+CREATE TABLE marcas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL
+);
 
 -- placa, marca, modelo , ano
 CREATE TABLE carros (      
@@ -58,6 +59,8 @@ drop table marcas;
 drop table carros;
 drop table pessoas ;
 -- atençao 
+DROP DATABASE aula_db;
+
 
 
 
@@ -136,8 +139,9 @@ limit 5;
 -- exibir todas as tabelas
 SHOW TABLES;
 
+SELECT placa FROM carros;
 
-
+SELECT placa FROM carros WHERE placa IN ('7894ABC', '5678DEF', '9101GHI', '1122JKL', '3344MNO', '5566PQR', '7788STU', '9900VWX', '2233YZA', '4455BCD');
 
 
 -- 1. fazer os comandos para inserir, atualizar, excluir e visualizar registros de todas as tabelas 
@@ -179,16 +183,17 @@ INSERT INTO carros(placa, marca_id, modelo, ano) VALUES
 
 -- add mais pessoas para melhora a tabela
 INSERT INTO pessoas(nome, cpf, data_nascimento) VALUES
-('Obelisk the Tormentor', '12345678901', '1999-01-01'),
-('Exodia the Forbidden One', '23456789012', '1998-02-02'),
-('Dark Magician', '34567890123', '1997-03-03'),
-('Blue-Eyes White Dragon', '45678901234', '1996-04-04'),
-('Black Luster Soldier', '56789012345', '1995-05-05'),
-('Summoned Skull', '67890123456', '1994-06-06'),
-('Red-Eyes Black Dragon', '78901234567', '1993-07-07'),
-('Slifer the Sky Dragon', '89012345678', '1992-08-08'),
-('Cyber Dragon', '90123456789', '2001-09-09'),
-('Dark Magician Girl', '01234567890', '2002-10-10');
+('Abraham', '12345678901', '1999-01-01'),
+('Isaac', '23456789012', '1998-02-02'),
+('Jacob', '34567890123', '1997-03-03'),
+('Moses', '45678901234', '1996-04-04'),
+('David', '56789012345', '1995-05-05'),
+('Solomon', '67890123456', '1994-06-06'),
+('Samuel', '78901234567', '1993-07-07'),
+('Elijah', '89012345678', '1992-08-08'),
+('Peter', '90123456789', '2001-09-09'),
+('Mary', '01234567890', '2002-10-10');
+
 
 -- relacionando pessoas aos carros 
 insert into carros_pessoas(placa, pessoa_id) values 
@@ -266,6 +271,7 @@ join marcas m on c.marca_id = m.id;
 -- liste todas as pessoas que possuem carros cadastrados;
 -- encontre as marcas de carros que não possuem nenhum veículo registrado.
 
+SHOW TABLES;
 
 
 
