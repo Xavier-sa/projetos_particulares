@@ -1,0 +1,7 @@
+-- Selecione todos os registros da tabela marcas;
+-- Liste Todas as placas e anos dos carros cadastrados;
+-- Mostre o nome e a data de nascimento de todas as pessoas;
+-- Liste todos os carros do ano 2020 ou mais recentes;
+-- Encontre todas as pessoas nascidas antes do ano 2000.
+-- Selecione os carros de uma marca específica (exemplo: "Toyota").
+-- Exiba todas as pessoas cujo nome comece com a letra "A".

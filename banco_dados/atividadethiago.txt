@@ -1,0 +1,183 @@
+### 1. *Selecione todos os registros da tabela marcas*
+sql
+SELECT * FROM marcas;
+
+
+---
+
+### 2. *Liste todas as placas e anos dos carros cadastrados*
+sql
+SELECT placa, ano FROM carros;
+
+
+---
+
+### 3. *Mostre o nome e a data de nascimento de todas as pessoas*
+sql
+SELECT nome, data_nascimento FROM pessoas;
+
+
+---
+
+### 4. *Liste todos os carros do ano 2020 ou mais recentes*
+sql
+SELECT * FROM carros WHERE ano >= 2020;
+
+
+---
+
+### 5. *Encontre todas as pessoas nascidas antes do ano 2000*
+sql
+SELECT * FROM pessoas WHERE YEAR(data_nascimento) < 2000;
+
+
+---
+
+### 6. *Selecione os carros de uma marca específica (exemplo: "Toyota")*
+sql
+SELECT c.placa, c.modelo, c.ano, m.nome AS marca
+FROM carros c
+JOIN marcas m ON c.marca_id = m.id
+WHERE m.nome = 'Toyota';
+
+
+---
+
+### 7. *Exiba todas as pessoas cujo nome comece com a letra "A"*
+sql
+SELECT * FROM pessoas WHERE nome LIKE 'A%';
+
+
+---
+
+### 8. *Liste todos os carros com suas respectivas marcas*
+sql
+SELECT c.placa, c.modelo, c.ano, m.nome AS marca
+FROM carros c
+JOIN marcas m ON c.marca_id = m.id;
+
+
+---
+
+### 9. *Mostre o nome das pessoas e os carros que elas possuem 
+sql
+SELECT p.nome, p.cpf, c.placa, c.modelo, c.ano
+FROM pessoas p
+LEFT JOIN carros_pessoas cp ON p.id = cp.pessoa_id
+LEFT JOIN carros c ON cp.placa = c.placa;
+
+
+---
+
+### 10. *Conte quantos carros existem para cada marca*
+sql
+SELECT m.nome AS marca, COUNT(c.placa) AS total_carros
+FROM marcas m
+LEFT JOIN carros c ON m.id = c.marca_id
+GROUP BY m.nome;
+
+
+---
+
+### 11. *Liste as pessoas que não possuem carros cadastrados*
+sql
+SELECT p.nome, p.cpf
+FROM pessoas p
+LEFT JOIN carros_pessoas cp ON p.id = cp.pessoa_id
+WHERE cp.placa IS NULL;
+
+
+---
+
+### 12. *Liste as marcas que não possuem carros cadastrados*
+sql
+SELECT m.nome
+FROM marcas m
+LEFT JOIN carros c ON m.id = c.marca_id
+WHERE c.placa IS NULL;
+
+
+---
+
+### 13. *Liste os carros cadastrados com suas marcas e os nomes dos proprietários (se houver)*
+sql
+SELECT c.placa, c.modelo, c.ano, m.nome AS marca, p.nome AS proprietario
+FROM carros c
+JOIN marcas m ON c.marca_id = m.id
+LEFT JOIN carros_pessoas cp ON c.placa = cp.placa
+LEFT JOIN pessoas p ON cp.pessoa_id = p.id;
+
+
+---
+
+### 14. *Liste as pessoas que possuem mais de um carro*
+sql
+SELECT p.nome, COUNT(cp.placa) AS total_carros
+FROM pessoas p
+JOIN carros_pessoas cp ON p.id = cp.pessoa_id
+GROUP BY p.id
+HAVING COUNT(cp.placa) > 1;
+
+
+---
+
+### 15. *Liste os carros cadastrados ordenados pelo ano (do mais recente para o mais antigo)*
+sql
+SELECT * FROM carros ORDER BY ano DESC;
+
+
+---
+
+### 16. *Liste as pessoas ordenadas por data de nascimento (da mais nova para a mais velha)*
+sql
+SELECT * FROM pessoas ORDER BY data_nascimento DESC;
+
+
+---
+
+### 17. *Liste as marcas e a quantidade de carros cadastrados, ordenadas pela quantidade de carros (da maior para a menor)*
+sql
+SELECT m.nome AS marca, COUNT(c.placa) AS total_carros
+FROM marcas m
+LEFT JOIN carros c ON m.id = c.marca_id
+GROUP BY m.nome
+ORDER BY total_carros DESC;
+
+
+---
+
+### 18. *Liste os carros cadastrados com suas marcas e o nome do proprietário (se houver), ordenados pelo nome do proprietário*
+sql
+SELECT c.placa, c.modelo, c.ano, m.nome AS marca, p.nome AS proprietario
+FROM carros c
+JOIN marcas m ON c.marca_id = m.id
+LEFT JOIN carros_pessoas cp ON c.placa = cp.placa
+LEFT JOIN pessoas p ON cp.pessoa_id = p.id
+ORDER BY p.nome;
+
+
+---
+
+### 19. *Liste as pessoas que possuem carros de uma marca específica (exemplo: "Toyota")*
+sql
+SELECT p.nome, p.cpf, c.placa, c.modelo, c.ano
+FROM pessoas p
+JOIN carros_pessoas cp ON p.id = cp.pessoa_id
+JOIN carros c ON cp.placa = c.placa
+JOIN marcas m ON c.marca_id = m.id
+WHERE m.nome = 'Toyota';
+
+
+---
+
+### 20. *Liste os carros cadastrados que não possuem proprietários*
+sql
+SELECT c.placa, c.modelo, c.ano
+FROM carros c
+LEFT JOIN carros_pessoas cp ON c.placa = cp.placa
+WHERE cp.pessoa_id IS NULL;
+
+
+---
+
+Esses prompts cobrem uma variedade de consultas úteis para o seu banco de dados. Se precisar de mais alguma consulta específica, é só pedir! 🚀
