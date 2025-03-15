@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "aula_db";
+$database = "trabalho";
 $conn = new mysqli($host, $user, $password, $database);
 
 // Verificar conexão
