@@ -1,3 +1,4 @@
+-- ddl - Data Definition Language
 create database if not  exists aula_db;
 
 use aula_db;

@@ -13,6 +13,14 @@ INSERT INTO marcas (nome) VALUES
 ('Peugeot'),
 ('Jeep');
 
+-- para o exericio 16 
+insert into carros_pessoas(placa, pessoa_id) VALUES ('1122JKL','1');
+-- para o exercicio 17 
+insert into marcas (nome) Values('Ferrari');
+
+
+
+
 -- vou add mais carros (MELHORA A VISIBILIDADE )
 INSERT INTO carros(placa, marca_id, modelo, ano) VALUES
 ('7894ABC', 1, 'Corolla', 2020),
@@ -25,6 +33,8 @@ INSERT INTO carros(placa, marca_id, modelo, ano) VALUES
 ('9900VWX', 8, 'Argo', 2020),
 ('2233YZA', 9, '308', 2019),
 ('4455BCD', 10, 'Renegade', 2022);
+
+
 
 
 -- add mais pessoas para melhora a tabela
