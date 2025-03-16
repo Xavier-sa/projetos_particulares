@@ -4,6 +4,68 @@ import mysql.connector
 from model.login import Ui_Login  
 from model.cadastrar import CadastroWindow
 from model.perfil import PerfilWindow
+# Estilo CSS
+# Estilo CSS (sem a propriedade transition)
+STYLE = """
+QWidget {
+    background-color: #222222;
+    color: #FFD700;
+    font-family: 'Saiyan Sans', Arial, sans-serif;
+}
+
+QLabel {
+    color: #F57C00;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+   
+}
+
+QLineEdit {
+    background-color: #333333;
+    color: #FFD700;
+    border: 2px solid #F57C00;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+QPushButton {
+    background-color: #1976D2;
+    color: #FFFFFF;
+    border: 2px solid #F57C00;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 15px;
+   
+}
+
+QPushButton:hover {
+    background-color: #F57C00;
+    color: #222222;
+    border-color: #FFD700;
+}
+
+QPushButton:pressed {
+    background-color: #D84315;
+}
+
+QLineEdit:focus {
+    border: 2px solid #FFD700;
+}
+
+QMessageBox {
+    background-color: #222222;
+    color: #FFD700;
+    font-size: 16px;
+}
+"""
+
+
+
+
 
 class LoginApp(QMainWindow):
     def __init__(self):
@@ -11,6 +73,9 @@ class LoginApp(QMainWindow):
         self.ui = Ui_Login()
         self.ui.setupUi(self)
         self.user_id = None
+
+        self.setStyleSheet(STYLE)  
+
 
         self.ui.btn_login.clicked.connect(self.check_login)
 
@@ -56,6 +121,9 @@ class LoginApp(QMainWindow):
 
         cursor.close()
         conn.close()
+        
+
+    
 
 # Inicializa o aplicativo
 if __name__ == "__main__":
