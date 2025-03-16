@@ -68,19 +68,25 @@ select count(*) as total_marcas from marcas;
 
 
 -- aqui vai listar em sequencia 2-solucao
-SELECT nome FROM marcas;
+select nome from marcas;
 
 
 -- 12-Descubra quantos carros existem no banco de dados.
-SELECT COUNT(*) AS total_carros FROM carros;
+select count(*) as total_carros from carros;
 
 -- 13-Calcule a idade média das pessoas cadastradas.
-
+select avg(year(curdate()) - year(data_nascimento)) as idade_media
+from pessoas;
 
 -- 14-Encontre o ano do carro mais antigo e do mais novo.
-
+select min(ano) as ano_mais_antigo, max(ano) as ano_mais_novo
+from carros;
 
 -- 15-Conte quantas pessoas possuem pelo menos um carro.
+
+select count(distinct pessoa_id) as total_pessoas_com_carro
+from carros_pessoas;
+
 
 -- 16-Liste todas as pessoas que possuem carros cadastrados.
 -- solucao que usei o distinct para nao repetir pessoas que tem mais de um carro no nome 
