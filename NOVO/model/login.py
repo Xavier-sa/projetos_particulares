@@ -1,6 +1,6 @@
 import sys
 import mysql.connector
-from PySide6.QtWidgets import QApplication, QDialog, QMessageBox
+from PySide6.QtWidgets import QApplication, QDialog, QMessageBox,QMainWindow
 from PySide6.QtUiTools import QUiLoader
 from PySide6.QtCore import QFile
 from .cadastro import CadastroWindow  

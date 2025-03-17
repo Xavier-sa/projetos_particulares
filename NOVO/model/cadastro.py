@@ -11,7 +11,7 @@ class CadastroWindow(QDialog):
 
         # Carrega a interface do arquivo .ui
         loader = QUiLoader()
-        ui_file = QFile("UI/cadastro.ui")
+        ui_file = QFile("ui/cadastro.ui")
         if not ui_file.exists():
             QMessageBox.critical(self, "Erro", "Arquivo UI não encontrado!")
             return

@@ -2,16 +2,16 @@
 <ui version="4.0">
  <class>CadastroWindow</class>
  <widget class="QMainWindow" name="CadastroWindow">
-  <property name="windowTitle">
-   <string>Cadastro de Usuário</string>
-  </property>
   <property name="geometry">
    <rect>
-    <x>100</x>
-    <y>100</y>
+    <x>0</x>
+    <y>0</y>
     <width>400</width>
-    <height>500</height>
+    <height>586</height>
    </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastro de Usuário</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
@@ -85,7 +85,7 @@ QLineEdit:focus {
       <item row="1" column="0">
        <widget class="QLineEdit" name="senha">
         <property name="echoMode">
-         <enum>QLineEdit::Password</enum>
+         <enum>QLineEdit::EchoMode::Password</enum>
         </property>
         <property name="placeholderText">
          <string>Senha</string>
@@ -153,5 +153,6 @@ QLineEdit:focus {
    </layout>
   </widget>
  </widget>
+ <resources/>
  <connections/>
 </ui>

@@ -1,5 +1,5 @@
 import mysql.connector
-from PySide6.QtWidgets import QApplication, QMessageBox
+from PySide6.QtWidgets import QMessageBox
 
 def connect_db():
     """Conecta ao banco de dados"""
@@ -16,9 +16,8 @@ def connect_db():
             return conn
     except mysql.connector.Error as err:
         # Exibe a mensagem de erro em um QMessageBox
-        app = QApplication([])  # Necessário criar uma instância do QApplication
         QMessageBox.critical(None, "Erro de Conexão", f"Erro ao conectar ao banco de dados: {err}")
         return None
+    
 
-# Teste a conexão
-connect_db()
+# connect_db() ok funcionou
