@@ -1,9 +1,8 @@
-from PySide6.QtWidgets import QApplication, QDialog
-from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QMessageBox
+from PySide6.QtWidgets import QApplication, QDialog, QMessageBox
 from PySide6.QtGui import QIcon
 from ui_login import Ui_Login
 from conexao import connect_db
+from cadastro import Cadastro  # Importe a classe Cadastro
 
 class Login(QDialog):
     def __init__(self):
@@ -23,32 +22,27 @@ class Login(QDialog):
         conn = connect_db()
         if conn:
             cursor = conn.cursor()
-            query = "SELECT * FROM users WHERE usuario = %s AND senha = %s"
+            query = "SELECT id FROM users WHERE username = %s AND password = %s"
             cursor.execute(query, (usuario, senha))
             result = cursor.fetchone()
             cursor.close()
             conn.close()
 
             if result:
-                # Se o login for bem-sucedido, exibe uma mensagem de sucesso
+                user_id = result[0]  # Obtém o ID do usuário logado
                 QMessageBox.information(self, "Sucesso", "Login realizado com sucesso!")
-                self.accept()  # Fecha a janela de login (opcional, dependendo da sua lógica)
+                self.accept()  # Fecha a janela de login
+
+                # Abre a janela de cadastro com o user_id
+                self.cadastro = Cadastro()
+                self.cadastro.abrir_janela_cadastro(user_id)
             else:
                 # Se o login falhar, exibe uma mensagem de erro
                 QMessageBox.warning(self, "Erro", "Usuário ou senha incorretos!")
 
-
-
-
-
-    
-
-
-
-
-
 if __name__ == "__main__":
-    app = QApplication([])  # Cria uma instância do aplicativo Qt
-    login = Login()  # Cria a instância da classe Login
-    login.show()  # Exibe a janela
-    app.exec()  # Executa o loop de eventos do Qt
+    app = QApplication([])  # Aqui abre o Qt
+    login = Login()         # Aqui chama a classe Login
+    login.setWindowIcon(QIcon("images/icon.PNG"))  # Aqui define o ícone da janela
+    login.show()            # Aqui mostra a janela
+    app.exec()              # Aqui executa o Qt
