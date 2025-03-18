@@ -18,5 +18,16 @@ DROP TABLE carros_pessoas;
  -- Deletar meu banco aula_db
 drop database aula_db;
 
-
+--  resumo
+SELECT- extrai dados de um banco de dados
+UPDATE- atualiza dados em um banco de dados
+DELETE- exclui dados de um banco de dados
+INSERT INTO- insere novos dados em um banco de dados
+CREATE DATABASE- cria um novo banco de dados
+ALTER DATABASE- modifica um banco de dados
+CREATE TABLE- cria uma nova tabela
+ALTER TABLE- modifica uma tabela
+DROP TABLE- apaga uma tabela
+CREATE INDEX- cria um índice (chave de pesquisa)
+DROP INDEX- exclui um índice
 
