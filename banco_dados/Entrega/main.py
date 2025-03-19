@@ -1,4 +1,6 @@
-import mysql.connector
+import mysql.connector 
+
+
 
 def conectar_banco():
     """Conecta ao banco de dados e retorna a conexão e o cursor."""
@@ -33,7 +35,9 @@ def executar_consulta(cursor, consulta):
 
 def menu():
     """Exibe o menu de opções para o usuário."""
-    print("\n--- Sistema de Consulta Interativo ---")
+    """Fiz da maneira simples para praticar..."""
+    print(f"\n{'-' * 40}")
+    print("\n--- Lista Sobre Banco de Dados ---")
     print("1. Listar todas as marcas")
     print("2. Listar placas e anos dos carros")
     print("3. Mostrar nome e data de nascimento das pessoas")
@@ -43,7 +47,7 @@ def menu():
     print("7. Mostrar pessoas cujo nome começa com 'A'")
     print("8. Listar placas dos carros e suas marcas")
     print("9. Mostrar pessoas e os carros que possuem")
-    print("10. Mostrar pessoas que possuem carros de uma marca específica (ex: Ford, Toyota, BMW, Mercedes-Benz, Chevrolet, Hyundai, Kia, Fiat, Peugeot, Jeep, Ferrari")
+    print("10. Mostrar pessoas que possuem carros de uma marca específica (ex: Ford, Toyota, etc.)")
     print("11. Contar quantas marcas de carros estão cadastradas")
     print("12. Contar quantos carros existem no banco de dados")
     print("13. Calcular a idade média das pessoas")
@@ -51,7 +55,14 @@ def menu():
     print("15. Contar quantas pessoas possuem pelo menos um carro")
     print("16. Listar todas as pessoas que possuem carros")
     print("17. Encontrar marcas de carros sem veículos registrados")
-    print("18. Sair")
+    print("18. Listar os 5 carros mais novos cadastrados")
+    print("19. Listar as pessoas pelo nome em ordem alfabética")
+    print("20. Listar as três marcas com mais carros cadastrados")
+    print("21. Excluir uma marca que possui carros cadastrados (Teste)")
+    print("22. Excluir uma pessoa que possui carros associados (Teste)")
+    print("23. Atualizar o nome de uma marca (Teste)")
+    print("24. Sair")
+    print(f"\n{'-' * 40}")
     return input("Escolha uma opção: ")
 
 def main():
@@ -97,7 +108,7 @@ def main():
                 JOIN carros c ON cp.placa = c.placa
             """)
         elif opcao == "10":
-            marca = input("Digite o nome da marca (ex: Ford, Toyota, BMW, Mercedes-Benz, Chevrolet, Hyundai, Kia, Fiat, Peugeot, Jeep, Ferrari): ")  
+            marca = input("Digite o nome da marca {(ex: Ford, Toyota, etc.)}: ")
             executar_consulta(cursor, f"""
                 SELECT p.nome AS pessoa, m.nome AS marca
                 FROM pessoas p
@@ -133,7 +144,39 @@ def main():
                 WHERE c.placa IS NULL
             """)
         elif opcao == "18":
-            print("Saindo da Lista...")
+            executar_consulta(cursor, """
+                SELECT placa, modelo, ano, nome
+                FROM carros c
+                JOIN marcas m ON c.marca_id = m.id
+                ORDER BY ano DESC
+                LIMIT 5
+            """)
+        elif opcao == "19":
+            executar_consulta(cursor, "SELECT nome FROM pessoas ORDER BY nome")
+        elif opcao == "20":
+            executar_consulta(cursor, """
+                SELECT m.nome, COUNT(c.placa) AS total_carros
+                FROM marcas m
+                LEFT JOIN carros c ON m.id = c.marca_id
+                GROUP BY m.id
+                ORDER BY total_carros DESC
+                LIMIT 3
+            """)
+        elif opcao == "21":
+            marca_id = input("Digite o ID da marca que deseja excluir (TESTE): ")
+            executar_consulta(cursor, f"DELETE FROM marcas WHERE id = {marca_id}")
+            print("Operação de exclusão concluída (TESTE).")
+        elif opcao == "22":
+            pessoa_id = input("Digite o ID da pessoa que deseja excluir (TESTE): ")
+            executar_consulta(cursor, f"DELETE FROM pessoas WHERE id = {pessoa_id}")
+            print("Operação de exclusão concluída (TESTE).")
+        elif opcao == "23":
+            marca_id = input("Digite o ID da marca que deseja atualizar: ")
+            novo_nome = input("Digite o novo nome da marca: ")
+            executar_consulta(cursor, f"UPDATE marcas SET nome = '{novo_nome}' WHERE id = {marca_id}")
+            print("Operação de atualização concluída.")
+        elif opcao == "24":
+            print("Saindo do sistema...")
             break
         else:
             print("Opção inválida. Tente novamente.")

@@ -104,4 +104,55 @@ from marcas m
 left join carros c on m.id = c.marca_id
 where c.placa is null;
 
--- tem que sair Ferrari inseri la
+-- tem que sair Ferrari inseri OK funcionou
+
+
+-- 18-Liste os 5 carros mais novos cadastrados.
+
+select placa, modelo, ano, nome
+from carros c
+join marcas m ON c.marca_id = m.id
+order by ano desc
+limit 5;   -- funcionou lol
+
+-- 19-Liste as pessoas pelo nome em ordem alfabética.
+
+select nome  
+from pessoas
+order by nome;
+
+-- 20-Liste as três marcas com mais carros cadastrados.
+
+select m.nome, count(c.placa) AS total_carros
+from marcas m
+left join carros c on m.id = c.marca_id
+group by m.id
+order by total_carros desc
+limit 3;
+
+
+-- 21-Exclua uma marca que possui carros cadastrados. O que acontece? Explique.
+
+
+delete from marcas  -- creio que nao seja permito devido cahve estrangeira 
+where id = <id_da_marca>;
+
+-- 22-Exclua uma pessoa que possui carros associados. O que acontece? Explique.
+
+delete from pessoas
+where id = <id_da_pessoa>;  -- falha devido a achave e relacionemnto
+
+-- 23-Atualize o nome de uma marca e verifique se isso afeta os carros associados.Explique.
+
+update marcas
+set nome = 'Xavier V6'
+where id = 1; -- thiago alterei o do toyota para testar 
+
+-- voltei pra toyota
+update marcas
+set nome = 'Toyota'
+where id = 1; -- funcionando
+
+
+
+-- aparentemente nao terei grandes problemas pois como apenas alterei o nome nas demais tabelas vira com o novo nome da marca
