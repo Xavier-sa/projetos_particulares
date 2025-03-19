@@ -1,6 +1,6 @@
 import mysql.connector 
 
-
+# futuramente vou mudar a logica e fazer funcoes menores fiz assim para praticar
 
 def conectar_banco():
     """Conecta ao banco de dados e retorna a conexão e o cursor."""
@@ -47,7 +47,7 @@ def menu():
     print("7. Mostrar pessoas cujo nome começa com 'A'")
     print("8. Listar placas dos carros e suas marcas")
     print("9. Mostrar pessoas e os carros que possuem")
-    print("10. Mostrar pessoas que possuem carros de uma marca específica (ex: Ford, Toyota, etc.)")
+    print("10. Mostrar pessoas que possuem carros de uma marca específica (Vou listar as Marcas)")
     print("11. Contar quantas marcas de carros estão cadastradas")
     print("12. Contar quantos carros existem no banco de dados")
     print("13. Calcular a idade média das pessoas")
@@ -105,18 +105,40 @@ def main():
                 SELECT p.nome AS pessoa, c.placa, c.modelo, c.ano
                 FROM pessoas p
                 JOIN carros_pessoas cp ON p.id = cp.pessoa_id
-                JOIN carros c ON cp.placa = c.placa
+                JOIN carros c ON cp.placa = c.placa1
             """)
         elif opcao == "10":
-            marca = input("Digite o nome da marca {(ex: Ford, Toyota, etc.)}: ")
-            executar_consulta(cursor, f"""
-                SELECT p.nome AS pessoa, m.nome AS marca
-                FROM pessoas p
-                JOIN carros_pessoas cp ON p.id = cp.pessoa_id
-                JOIN carros c ON cp.placa = c.placa
-                JOIN marcas m ON c.marca_id = m.id
-                WHERE m.nome = '{marca}'
-            """)
+            
+            cursor.execute("SELECT id, nome FROM marcas")
+            marcas = cursor.fetchall()
+
+            if marcas:
+                print("\nMarcas disponíveis:")
+                for marca in marcas:
+                    print(f"{marca[0]}. {marca[1]}")
+
+               
+                marca_id = input("Digite o ID da marca que deseja consultar: ")
+
+               
+                if marca_id.isdigit() and any(marca[0] == int(marca_id) for marca in marcas):
+                   
+                    executar_consulta(cursor, f"""
+                        SELECT p.nome AS pessoa, m.nome AS marca
+                        FROM pessoas p
+                        JOIN carros_pessoas cp ON p.id = cp.pessoa_id
+                        JOIN carros c ON cp.placa = c.placa
+                        JOIN marcas m ON c.marca_id = m.id
+                        WHERE m.id = {marca_id}
+                    """)
+                else:
+                    print("ID de marca inválido. Tente novamente.")
+            else:
+                print("Nenhuma marca cadastrada no banco de dados.")
+
+        
+
+
         elif opcao == "11":
             executar_consulta(cursor, "SELECT COUNT(*) AS total_marcas FROM marcas")
         elif opcao == "12":

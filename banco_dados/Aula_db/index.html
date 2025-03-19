@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>1% Melhor!</title>
+</head>
+<body>
+
+    <p> Aprendendo sobre banco de dados </p>
+    <p> Principais Comandos Banco </p>
+    <p> CREATE DATABASE nome_do_banco; </p>
+    <p> DROP DATABASE nome_do_banco; </p>
+    <p> USE nome_do_banco; </p>
+    <p> SHOW DATABASES; </p>
+    <p> CREATE TABLE nome_da_tabela (coluna1 tipo, coluna2 tipo, coluna3 tipo); </p>
+    <p> DROP TABLE nome_da_tabela; </p>
+    <p> SHOW TABLES; </p>
+    <p> INSERT INTO nome_da_tabela (coluna1, coluna2, coluna3) VALUES (valor1, valor2, valor3); </p>
+    <p> SELECT * FROM nome_da_tabela; </p>
+    <p> SELECT coluna1, coluna2 FROM nome_da_tabela; </p>
+    <p> SELECT * FROM nome_da_tabela WHERE coluna1 = valor1; </p>
+    <p> SELECT * FROM nome_da_tabela WHERE coluna1 = valor1 AND coluna2 = valor2; </p>
+    <p> SELECT * FROM nome_da_tabela WHERE coluna1 = valor1 OR coluna2 = valor2; </p>
+    <p> SELECT * FROM nome_da_tabela WHERE coluna1 = valor1 ORDER BY coluna2; </p>
+    <p> SELECT * FROM nome_da_tabela WHERE coluna1 = valor1 ORDER BY coluna2 DESC; </p>
+    <p> SELECT * FROM nome_da_tabela WHERE coluna1 = valor1 LIMIT 10; </p>
+    <p> SELECT * FROM nome_da_tabela WHERE coluna1 = valor1 LIMIT 10 OFFSET 5; </p>
+    <p> SELECT * FROM nome_da_tabela WHERE coluna1 = valor1 LIMIT 10 OFFSET 5; </p>
+    <p> SELECT COUNT(*) FROM nome_da_tabela; </p>
+    <p> SELECT COUNT(*) FROM nome_da_tabela WHERE coluna1 = valor1; </p>
+    <p> SELECT COUNT(*) FROM nome_da_tabela WHERE coluna1 = valor1 AND coluna2 = valor2; </p>
+    <p> SELECT COUNT(*) FROM nome_da_tabela WHERE coluna1 = valor1 OR coluna2 = valor2; </p>
+    <p> SELECT COUNT(*) FROM nome_da_tabela WHERE coluna1 = valor1 ORDER BY coluna2; </p>
+    <p> SELECT COUNT(*) FROM nome_da_tabela WHERE coluna1 = valor1 ORDER BY coluna2 DESC; </p>
+    <p> SELECT COUNT(*) FROM nome_da_tabela WHERE coluna1 = valor1 LIMIT 10; </p>
+    <p> SELECT COUNT(*) FROM nome_da_tabela WHERE coluna1 = valor1 LIMIT 10 OFFSET 5; </p>
+    <p> SELECT COUNT(*) FROM nome_da_tabela WHERE coluna1 = valor1 LIMIT 10 OFFSET 5; </p>
+    <p> SELECT SUM(coluna1) FROM nome_da_tabela; </p>
+    <p> SELECT SUM(coluna1) FROM nome_da_tabela WHERE coluna2 = valor2; </p>
+    <p> SELECT AVG(coluna1) FROM nome_da_tabela; </p>
+    <p> SELECT AVG(coluna1) FROM nome_da_tabela WHERE coluna2 = valor2; </p>
+    <p> SELECT MAX(coluna1) FROM nome_da_tabela; </p>
+    <p> SELECT MAX(coluna1) FROM nome_da_tabela WHERE coluna2 = valor2; </p>
+    <p> SELECT MIN(coluna1) FROM nome_da_tabela; </p>
+    <p> SELECT MIN(coluna1) FROM nome_da_tabela WHERE coluna2 = valor2; </p>
+    <p> SELECT coluna1, COUNT(*) FROM nome_da_tabela GROUP BY coluna1; </p>
+    <p> SELECT coluna1, COUNT(*) FROM nome_da_tabela WHERE coluna2 = valor2 GROUP BY coluna1; </p>
+    <p> SELECT coluna1, COUNT(*) FROM nome_da_tabela WHERE coluna2 = valor2 GROUP BY coluna1 HAVING COUNT(*) > 1; </p>
+    <p> SELECT coluna1, COUNT(*) FROM nome_da_tabela WHERE coluna2 = valor2 GROUP BY coluna1 HAVING COUNT(*) > 1 ORDER BY COUNT(*) DESC; </p>
+    <p> SELECT coluna1, COUNT(*) FROM nome_da_tabela WHERE coluna2 = valor2 GROUP BY coluna1 HAVING COUNT(*) > 1 ORDER BY COUNT(*) DESC LIMIT 10; </p>
+    
+    
+</body>
+</html>
