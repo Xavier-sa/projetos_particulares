@@ -1,0 +1,7 @@
+O usuario deve liga o xampp , e ativar o banco de dados em seguida criar no arquivo :
+
+---> criar-banco-teste-teste123.exe
+                (usuario-senha)
+
+
+--> xavier.exe
