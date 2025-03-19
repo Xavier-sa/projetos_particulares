@@ -77,11 +77,22 @@ def criar_banco():
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
             """
 
-            # Executa o script SQL
+            # Executa o script SQL para criar as tabelas
             for resultado in cursor.execute(sql, multi=True):
                 pass  # Executa cada comando SQL
 
             print("Tabelas criadas com sucesso.")
+
+            # Insere o usuário inicial (teste, teste123)
+            cursor.execute("""
+                INSERT INTO users (username, password)
+                VALUES (%s, %s)
+                ON DUPLICATE KEY UPDATE username = username;
+            """, ("teste", "teste123"))
+
+            # Confirma a inserção
+            conexao.commit()
+            print("Usuário inicial 'teste' inserido com sucesso.")
 
             # Fecha a conexão
             cursor.close()
