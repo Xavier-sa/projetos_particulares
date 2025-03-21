@@ -1,0 +1,92 @@
+{
+    "lider": {
+        "nome": "WaKakaroto",
+        "imagem": "https://sm.ign.com/ign_br/screenshot/default/dxzq-7dvwaaekxn_rmt7.jpg"
+    },
+    "anciaos": [
+        {
+            "nome": "Ancião 1 ",
+            "imagem": "https://sm.ign.com/ign_br/screenshot/default/dxzq-7dvwaaekxn_rmt7.jpg"
+        },
+        {
+            "nome": "Ancião 2 - Lua",
+            "imagem": "https://sm.ign.com/ign_br/screenshot/default/dxzq-7dvwaaekxn_rmt7.jpg"
+        },
+        {
+            "nome": "Ancião 3 - Sol",
+            "imagem": "https://sm.ign.com/ign_br/screenshot/default/dxzq-7dvwaaekxn_rmt7.jpg"
+        },
+        {
+            "nome": "Ancião 4 - Estrela",
+            "imagem": "https://sm.ign.com/ign_br/screenshot/default/dxzq-7dvwaaekxn_rmt7.jpg"
+        }
+    ],
+    "egide_sombria": {
+        "nome": "Egide Sombria - Eclipse",
+        "imagem": "https://file.mir4global.com/mir4-brand-global/img/mobile/section3/slide_3.jpg"
+    },
+    "membros": [
+        {
+            "nome": "Patoolooko",
+            "imagem": "https://styles.redditmedia.com/t5_2w0y1/styles/communityIcon_zay2xdt0p0d61.png"
+        },
+        {
+            "nome": "Membro  - Terra",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Membro  - Fogo",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Membro  - Água",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Membro 5- Raio",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Patoolooko",
+            "imagem": "https://styles.redditmedia.com/t5_2w0y1/styles/communityIcon_zay2xdt0p0d61.png"
+        },
+        {
+            "nome": "Membro  - Terra",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Membro  - Fogo",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Membro  - Água",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Membro 5- Raio",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        }
+    ],
+    "novos_membros": [
+        {
+            "nome": "Novo Membro 1 - Aurora",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Novo Membro 2 - Crepúsculo",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Novo Membro 3 - Alvorada",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Novo Membro 4 - Noite",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        },
+        {
+            "nome": "Novo Membro 5 - Dia",
+            "imagem": "https://seliganerd.com/wp-content/uploads/solo_leveling_o_que_e__w24vo9-1.webp"
+        }
+    ]
+}
