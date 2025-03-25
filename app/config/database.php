@@ -2,12 +2,12 @@
 
 class Database
 {
-    private $host;
-    private $port;
-    private $username;
+    private $host = "localhost";
+    private $port = "3306";
+    private $username ="root";
     private $password;
-    private $db;
-    private $conn;
+    private $dbName = "xavier_solutions";
+    
 
     // Responsável por instanciar um objeto de Database
     public function __construct($host, $port, $username, $password, $db)
@@ -31,7 +31,7 @@ class Database
             ];
 
             // Criação da conexão
-            $this->conn = new PDO($connUrl, $this->username, $this->password, $options);
+            $this->conn = new PDO($connUrl, $this->username, $this->password);
             return $this->conn;
         } catch (PDOException $e) {
             echo "Erro na conexão: " . $e->getMessage();  // Exibe o erro completo
@@ -46,7 +46,7 @@ $database = new Database(
     3306,          // Porta padrão do MySQL
     "root",        // Nome de usuário padrão do MySQL (pode ser diferente, dependendo da sua instalação)
     "",            // Senha do MySQL (normalmente vazia para 'root' se você não configurou)
-    "meu_banco"    // Nome do banco de dados que você criou
+    "xavier_solutions"    // Nome do banco de dados que você criou
 );
 
 $conn = $database->createConnection();
