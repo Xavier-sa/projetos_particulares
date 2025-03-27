@@ -2,6 +2,7 @@
 require_once('../../config/env.php');
 require_once('../componentes/navbar.php');
 require_once('../componentes/sidebar.php');
+
 ?>
 
 <!DOCTYPE html>

@@ -1,15 +1,28 @@
+<!-- ok funcionando-->
+
 <?php
 require_once('../../config/env.php');
 require_once('../componentes/navbar.php');
 require_once('../componentes/sidebar.php');
 
-// dados fake
-$usuarios = [
-    // ['nome' => 'Broly', 'email' => 'Broly@email.com'],
-    // ['nome' => 'Trunks', 'email' => 'Trunks@email.com'],
-    // ['nome' => 'Yamcha', 'email' => 'Yamcha@email.com'],
-    ['nome' => 'Vegeta', 'email' => 'vegeta@email.com']
-];
+
+require_once('../../config/database.php');
+
+
+$database = new Database("localhost", "3306", "root", "", "xavier_solutions");
+
+
+$pdo = $database->createConnection();
+
+if (!$pdo) {
+    die("Não foi possível conectar ao banco de dados");
+}
+
+require_once('../../model/UsuarioModel.php');
+$usuarioModel = new UsuarioModel($pdo);
+
+$usuarios = $usuarioModel->listarUsuarios();
+
 ?>
 
 <!DOCTYPE html>
@@ -29,32 +42,38 @@ $usuarios = [
         <table>
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Nome</th>
                     <th>Email</th>
+                    <th>Telefone</th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
+                
                 <?php foreach ($usuarios as $usuario): ?>
                     <tr>
-                        <td><?php echo $usuario['nome']; ?></td>
-                        <td><?php echo $usuario['email']; ?></td>
+                        <td><?php echo htmlspecialchars($usuario['id']); ?></td>
+                        <td><?php echo htmlspecialchars($usuario['nome']); ?></td>
+                        <td><?php echo htmlspecialchars($usuario['email']); ?></td>
+                        <td><?php echo htmlspecialchars($usuario['telefone']); ?></td>
                         <td>
                             <!-- Ações possíveis, como editar ou excluir -->
-                            <a href="#">Editar<span class="tooltip">Editar</span></a> | <a href="#"><span class="tooltip">Excluir</span>Excluir</a>
+                            <a href="editar_usuario.php?id=<?php echo $usuario['id']; ?>">Editar<span class="tooltip">Editar</span></a> | 
+                            <a href="excluir_usuario.php?id=<?php echo $usuario['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir<span class="tooltip">Excluir</span></a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
+        
+        <!-- Botão para adicionar novo usuário -->
+        <div class="actions">
+            <a href="adicionar_usuario.php" class="btn"><span class="material-symbols-outlined">add</span>Adicionar Usuário</a>
+        </div>
     </main>
 
     <!-- Rodapé -->
     <?php require_once('../componentes/footer.php'); ?>
 </body>
 </html>
-
-
-
-
-

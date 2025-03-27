@@ -8,6 +8,7 @@
 @import url(adm.css);
 @import url(sobre.css);
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+/* @import url(cadastrar.css); */
 
 .material-icons {
     font-family: 'Material Symbols Outlined';
@@ -27,6 +28,8 @@
 a{
     color:unset;  /* remove a cor dos links */
 }
+h1{padding: auto; margin: auto; text-align: center; font-size: 30px; color: #333333; margin-bottom: 20px;}
+   
 /* nesse arquivo: estilo pag. home */
 
 /* 
