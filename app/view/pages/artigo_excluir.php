@@ -27,7 +27,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     // Processa a exclusão quando for POST (confirmação)
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Executa a exclusão
-        $resultado = $artigoModel->excluirArtigos($id);
+        $resultado = $artigoModel->excluirArtigo($id);
         
         if ($resultado) {
             // Redireciona com mensagem de sucesso
