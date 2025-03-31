@@ -1,0 +1,1 @@
+app/view/assets/img/adm.jpg

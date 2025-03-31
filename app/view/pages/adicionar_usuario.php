@@ -31,7 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Redirecionando para a lista de usuários após a inserção
     header('Location: usuarios.php');
     exit;
+
+    
 }
+
 ?>
 
 <!DOCTYPE html>

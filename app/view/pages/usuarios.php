@@ -59,8 +59,8 @@ $usuarios = $usuarioModel->listarUsuarios();
                         <td><?php echo htmlspecialchars($usuario['telefone']); ?></td>
                         <td>
                             <!-- Ações possíveis, como editar ou excluir -->
-                            <a href="editar_usuario.php?id=<?php echo $usuario['id']; ?>">Editar<span class="tooltip">Editar</span></a> | 
-                            <a href="excluir_usuario.php?id=<?php echo $usuario['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir<span class="tooltip">Excluir</span></a>
+                             <a href="editar_usuario.php?id=<?php echo $usuario['id']; ?>"><span class="material-symbols-outlined">edit</span></a> <!-- editar -->
+                            <a href="excluir_usuario.php?id=<?php echo $usuario['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')"><span class="material-symbols-outlined">delete</span></a><!-- excluir -->
                         </td>
                     </tr>
                 <?php endforeach; ?>

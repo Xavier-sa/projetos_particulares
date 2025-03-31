@@ -35,8 +35,9 @@ $categorias = $categoriaModel->listarCategorias();
     <div class="card">
         <h2>
             Lista de Categorias
-            <a href="adicionar_categoria.php" class="btn-add">+ Nova Categoria</a>
+            
         </h2>
+        <a href="adicionar_categoria.php" class="btn btn-add">+ Novo</a>
         
         <?php if (empty($categorias)): ?>
             <p>Nenhuma categoria cadastrada.</p>

@@ -9,21 +9,21 @@ class UsuarioModel {
     // Método para criar um novo usuário
     public function criarUsuario($dados) {
         $sql = "INSERT INTO usuarios 
-                (nome, email, telefone, data_nascimento, cpf, senha) 
+                (nome, email, telefone, data_nascimento, cpf) 
                 VALUES 
-                (:nome, :email, :telefone, :data_nascimento, :cpf, :senha)";
+                (:nome, :email, :telefone, :data_nascimento, :cpf)";
         
         $stmt = $this->pdo->prepare($sql);
         
         // Hash da senha antes de armazenar
-        $senhaHash = password_hash($dados['senha'], PASSWORD_DEFAULT);
+        // $senhaHash = password_hash($dados['senha'], PASSWORD_DEFAULT);
         
         $stmt->bindParam(':nome', $dados['nome']);
         $stmt->bindParam(':email', $dados['email']);
         $stmt->bindParam(':telefone', $dados['telefone']);
         $stmt->bindParam(':data_nascimento', $dados['data_nascimento']);
         $stmt->bindParam(':cpf', $dados['cpf']);
-        $stmt->bindParam(':senha', $senhaHash);
+        // $stmt->bindParam(':senha', $senhaHash);
         
         return $stmt->execute();
     }
@@ -37,7 +37,7 @@ class UsuarioModel {
 
     // Método para obter um usuário por ID
     public function obterUsuarioPorId($id) {
-        $sql = "SELECT * FROM usuarios WHERE id = :id";
+        $sql = "SELECT * FROM usuarios WHERE id = :id"; 
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -66,8 +66,19 @@ class UsuarioModel {
         return $stmt->execute();
     }
 
+    private function excluirArtigos($id) {
+        $sql = "DELETE FROM artigos WHERE usuario_id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
     // Método para excluir um usuário
     public function excluirUsuario($id) {
+        // Excluindo primeiro os artigos relacionados ao usuário
+        $this->excluirArtigos($id);
+
+        // Agora, exclui o usuário
         $sql = "DELETE FROM usuarios WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -75,20 +86,25 @@ class UsuarioModel {
     }
 
     // irei criar futuramente
-    public function verificarLogin($email, $senha) {
+    public function verificarLogin($email) {
+         
         $sql = "SELECT * FROM usuarios WHERE email = :email";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':email', $email);
         $stmt->execute();
         
+        // Verifica se o usuário foi encontrado
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
         
-        if ($usuario && password_verify($senha, $usuario['senha'])) {
+        // Se o usuário for encontrado, retorna os dados do usuário
+        if ($usuario) {
             return $usuario;
         }
         
+        // Se o usuário não for encontrado, retorna false
         return false;
     }
+    
 
     // adicionando os dados do professor 
     public function popularDadosIniciais() {

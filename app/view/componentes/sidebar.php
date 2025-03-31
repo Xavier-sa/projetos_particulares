@@ -21,7 +21,7 @@
             <li><a href="<?php echo PG_PATH; ?>usuarios.php"><span class="material-symbols-outlined">group_add</span>Usuários</a></li>
 
 
-             <li><a href="<?php echo PG_PATH; ?>perfil.php" style="display:none;">Perfil</a></li> <!--vamos ver quem presta atencao -->
+             <li><a href="<?php echo PG_PATH; ?>perfil.php" style="display:none;"><span class="material-symbols-outlined">more</span>Perfil</a></li> <!--vamos ver quem presta atencao -->
 
             
         </ul>

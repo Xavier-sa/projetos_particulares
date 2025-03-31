@@ -31,10 +31,10 @@ require_once('../componentes/sidebar.php');
                 <div class="bio">
                     <h2>Sobre Mim</h2>
                     <p>
-                        Me chamo Wellingon Xavier, desenvolvedor em formação. Comecei minha jornada na área de TI após atuar em funções operacionais e agora estou buscando expandir minhas habilidades em desenvolvimento de sistemas.
+                        Me chamo Wellingon Xavier, formado gestão pública, desenvolvedor em formação. Comecei minha jornada na área de TI após atuar em funções operacionais e agora estou buscando expandir minhas habilidades em desenvolvimento de sistemas.
                     </p>
                     <p>
-                        Tenho experiência  vendas, monitor , orientador, freelances, carga e descarga, motorista(A/D), manutenção de motos, marcenaria e construção básica, etc.. formado gestão pública. Atualmente, estou focado em me especializar na área de desenvolvimento de software, buscando oportunidades para ter uma noção de qual direção seguir na area de TI.
+                        Tenho experiência  vendas, monitor , orientador, freelances, carga e descarga, motorista(A/D), manutenção de motos, marcenaria e construção básica, etc.. .Atualmente, estou focado em me especializar na área de desenvolvimento de software, buscando oportunidades para ter uma noção de qual direção seguir na area de TI.
                     </p>
                 </div>
             </div>
