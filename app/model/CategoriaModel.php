@@ -7,11 +7,10 @@ class CategoriaModel {
     }
 
     // Criar nova categoria
-    public function criarCategoria($nome, $descricao) {
-        $sql = "INSERT INTO categorias (nome, descricao) VALUES (:nome, :descricao)";
+    public function criarCategoria($nome) {
+        $sql = "INSERT INTO categorias (nome) VALUES (:nome)";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':nome', $nome);
-        $stmt->bindParam(':descricao', $descricao);
         return $stmt->execute();
     }
 
@@ -49,11 +48,13 @@ class CategoriaModel {
         return $stmt->execute();
     }
 
+    
+
     // Contar artigos por categoria
     public function contarArtigosPorCategoria($id_categoria) {
-        $sql = "SELECT COUNT(*) as total FROM artigos WHERE id_categoria = :id_categoria";
+        $sql = "SELECT COUNT(*) as total FROM artigos WHERE categoria_id = :id_categoria";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':id_categoria', $id_categoria);
+        $stmt->bindParam(':id_categoria', $id_categoria, PDO::PARAM_INT);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result['total'];

@@ -1,3 +1,6 @@
+<!-- funcioando -->
+
+
 <?php
 require_once('../../config/env.php');
 require_once('../componentes/navbar.php');
@@ -21,12 +24,12 @@ $msg = ""; // Variável para armazenar mensagens de erro ou sucesso
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Pega os dados do formulário
     $nome = $_POST['nome'];
-    $descricao = $_POST['descricao'];
+   
 
     // Valida se os campos não estão vazios
-    if (!empty($nome) && !empty($descricao)) {
+    if (!empty($nome) ) {
         // Cria a nova categoria
-        $categoriaModel->criarCategoria($nome, $descricao);
+        $categoriaModel->criarCategoria($nome);
         $msg = "Categoria adicionada com sucesso!";
     } else {
         $msg = "Por favor, preencha todos os campos.";
@@ -56,8 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="nome">Nome da Categoria</label>
             <input type="text" id="nome" name="nome" required>
             
-            <label for="descricao">Descrição da Categoria</label>
-            <textarea id="descricao" name="descricao" required></textarea>
+           
             
             <button type="submit" class="btn-add">Adicionar Categoria</button>
         </form>

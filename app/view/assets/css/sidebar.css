@@ -19,3 +19,39 @@
         }
     }
 }
+
+/* Esconde a sidebar em telas pequenas */
+@media (max-width: 768px) {
+    .sidebar {
+        left: -200px; /* Esconde a barra lateral movendo-a para fora da tela */
+    }
+
+    /* Botão de menu (hamburger) */
+    .sidebar-button {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #BDC3C7;
+        padding: 10px;
+        border: none;
+        font-size: 35px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    /* Mostrar a sidebar quando o botão for clicado */
+    .sidebar.open {
+        left: 0; /* Coloca a sidebar visível novamente */
+    }
+
+    /* Ajuste do conteúdo quando a sidebar está aberta */
+    .content {
+        margin-left: 200px; /* Deixa um espaço para a sidebar */
+        transition: margin-left 0.3s ease;
+    }
+
+    .content.sidebar-open {
+        margin-left: 0; /* O conteúdo ocupa toda a tela quando a sidebar está fechada */
+    }
+}

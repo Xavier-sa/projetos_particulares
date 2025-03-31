@@ -58,10 +58,10 @@ $artigos = $artigoModel->listarArtigos();
                             <td><?= htmlspecialchars($art['conteudo']) ?></td>
                             <td><?= htmlspecialchars($art['usuario_id']) ?></td>
                             <td>
-                                <a href="editar_artigo.php?id=<?= $art['id'] ?>" class="btn btn-edit">Editar</a>
+                                <a href="artigo_editar.php?id=<?= $art['id'] ?>" class="btn btn-edit"><span class="material-symbols-outlined">edit</span></a><!-- editar-->
                                 <a href="artigo_excluir.php?id=<?= $art['id'] ?>" 
                                    onclick="return confirm('Excluir este artigo?')" 
-                                   class="btn btn-delete">Excluir</a>
+                                   class="btn btn-delete"><span class="material-symbols-outlined">delete</span></a><!-- editar-->
                             </td>
                         </tr>
                     <?php endforeach; ?>

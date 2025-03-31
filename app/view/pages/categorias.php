@@ -37,7 +37,7 @@ $categorias = $categoriaModel->listarCategorias();
             Lista de Categorias
             
         </h2>
-        <a href="adicionar_categoria.php" class="btn btn-add">+ Novo</a>
+       
         
         <?php if (empty($categorias)): ?>
             <p>Nenhuma categoria cadastrada.</p>
@@ -46,7 +46,7 @@ $categorias = $categoriaModel->listarCategorias();
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>Descrição</th>
+                       
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -54,19 +54,18 @@ $categorias = $categoriaModel->listarCategorias();
                     <?php foreach ($categorias as $categoria): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($categoria['nome']); ?></td>
-                            <td><?php echo htmlspecialchars($categoria['descricao']); ?></td>
+                            
                             <td class="actions">
-                                <a href="editar_categoria.php?id=<?php echo $categoria['id']; ?>">Editar</a>
+                                <a href="editar_categoria.php?id=<?php echo $categoria['id']; ?>"><span class="material-symbols-outlined">edit</span></a><!-- editar-->
                                 <a href="excluir_categoria.php?id=<?php echo $categoria['id']; ?>" 
-                                   onclick="return confirm('Tem certeza que deseja excluir?')">
-                                    Excluir
-                                </a>
+                                   onclick="return confirm('Tem certeza que deseja excluir?')"><span class="material-symbols-outlined">delete</span></a><!-- excluir -->
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         <?php endif; ?>
+        <a href="adicionar_categoria.php" class="btn btn-add">+ Nova Categoria</a>
     </div>
 </main>
 

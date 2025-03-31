@@ -3,7 +3,7 @@
         <img src="<?php echo IMG_PATH; ?>logo.jpg" alt="logo">
         
         <ul>
-            
+        <!-- <button class="sidebar-button" onclick="toggleSidebar()">&#9776;</button> Botão  tenho que bolar um jeito de ao se tornar tela de celular a side bar sumir ou fica minimizada -->
             <li><a href="<?php echo PG_PATH; ?>home.php"><span class="material-symbols-outlined">home</span>Home</a></li>
             
 

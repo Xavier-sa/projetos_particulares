@@ -67,10 +67,9 @@ $usuarios = $usuarioModel->listarUsuarios();
             </tbody>
         </table>
         
-        <!-- Botão para adicionar novo usuário -->
-        <div class="actions">
-            <a href="adicionar_usuario.php" class="btn"><span class="material-symbols-outlined">add</span>Adicionar Usuário</a>
-        </div>
+              
+        <a href="adicionar_usuario.php" class="btn"><span class="material-symbols-outlined">add</span> Novo Usuário</a>
+      
     </main>
 
     <!-- Rodapé -->
