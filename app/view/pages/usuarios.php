@@ -4,10 +4,8 @@
 require_once('../../config/env.php');
 require_once('../componentes/navbar.php');
 require_once('../componentes/sidebar.php');
-
-
 require_once('../../config/database.php');
-
+require_once('../../model/UsuarioModel.php');
 
 $database = new Database("localhost", "3306", "root", "", "xavier_solutions");
 
@@ -18,7 +16,7 @@ if (!$pdo) {
     die("Não foi possível conectar ao banco de dados");
 }
 
-require_once('../../model/UsuarioModel.php');
+
 $usuarioModel = new UsuarioModel($pdo);
 
 $usuarios = $usuarioModel->listarUsuarios();
