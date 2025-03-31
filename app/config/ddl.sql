@@ -50,6 +50,23 @@ create table if not exists artigos (
     foreign key (usuario_id) references usuarios(id)  -- Relacionando com a tabela usuarios
 );
 
+
+
+
+
+-- DESCRIBE artigos;
+
+
+
+
+
+
+
+
+
+
+
+
 -- Inserir usuários (precisa ser antes dos artigos para garantir a referência correta)
 insert into usuarios(nome, email, telefone, data_nascimento, cpf) values
 ('xavier', 'xavier@gmail.com', '1234567890', '1985-04-15', '12345678901'),
