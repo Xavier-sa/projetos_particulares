@@ -50,6 +50,7 @@ create table if not exists artigos (
     foreign key (usuario_id) references usuarios(id)  -- Relacionando com a tabela usuarios
 );
 
+<<<<<<< HEAD
 
 
 
@@ -67,6 +68,14 @@ create table if not exists artigos (
 
 
 
+=======
+-- Inserir usuários (precisa ser antes dos artigos para garantir a referência correta)
+insert into usuarios(nome, email, telefone, data_nascimento, cpf) values
+('xavier', 'xavier@gmail.com', '1234567890', '1985-04-15', '12345678901'),
+('teste', 'teste@gmail.com', '1234567891', '1990-08-25', '98765432100'),
+('santos', 'santos@gmail.com', '1234567892', '1988-12-01', '12332112345'),
+('wellington', 'wellington@gmail.com', '1234567893', '1992-11-30', '54321678901');
+>>>>>>> parent of 354366a (arquivo banco de dados)
 
 
 -- Verificar os dados inseridos nas tabelas
