@@ -2,7 +2,7 @@
     
     <nav>
    
-        <img src="<?php echo IMG_PATH; ?>user.jpg" alt="imagem-usuario">
+        <img src="<?php echo IMG_PATH; ?>adm.jpg" alt="imagem-usuario">
       
     </nav>
 
