@@ -8,4 +8,4 @@ class LoginView(QDialog, Ui_Login):  # Herda de QDialog e Ui_Login
         self.setupUi(self)  # Configura a interface
         self.setWindowTitle("Login")  # Define o título da janela
         self.resize(412, 400)  # Define o tamanho da janela
-        self.setWindowIcon(QIcon("C:/xampp/htdocs/X-Invs/view/images/icon.png"))  # Caminho para o ícone
+        self.setWindowIcon(QIcon("view/images/icon.PNG"))  # Caminho para o ícone
