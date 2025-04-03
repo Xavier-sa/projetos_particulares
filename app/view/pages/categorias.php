@@ -19,14 +19,7 @@ $categoriaModel = new CategoriaModel($pdo);
 $categorias = $categoriaModel->listarCategorias();
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xavier Solutions - Categorias</title>
-    <link rel="stylesheet" href="<?php echo CSS_PATH; ?>style.css">
-</head>
+<?php require_once('../componentes/head.php'); ?>
 <body>
 
 <main class="content">

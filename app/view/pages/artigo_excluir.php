@@ -42,14 +42,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excluir Artigo - Xavier Solutions</title>
-    <link rel="stylesheet" href="<?php echo CSS_PATH; ?>style.css">
-</head>
+<?php require_once('../componentes/head.php'); ?>
 <body>
     <main class="content">
         <h1>Excluir Artigo</h1>
