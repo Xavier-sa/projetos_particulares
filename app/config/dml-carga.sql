@@ -18,7 +18,9 @@ INSERT INTO usuarios(nome, email, telefone, data_nascimento, cpf) VALUES
 ('Ester', 'ester@gmail.com', '1234567905', '1996-09-14', '22334455678'),
 ('Isaías', 'isaias@gmail.com', '1234567906', '1984-12-12', '33445566789'),
 ('Davi', 'davi@gmail.com', '1234567907', '1982-08-01', '44556677890'),
-('Samuel', 'samuel@gmail.com', '1234567908', '1981-07-30', '55667788901');
+('Samuel', 'samuel@gmail.com', '1234567908', '1981-07-30', '55667788901'),
+('Lázaro', 'lazaro@gmail.com', '1234567909', '1997-05-12', '66778899002');
+
 
 
 -- Inserir categorias

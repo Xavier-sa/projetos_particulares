@@ -37,7 +37,7 @@ create table if not exists usuarios (
 
 
 
-
+-- DROP TABLE xavier_solutions.usuarios
 
 -- Criar a tabela artigos
 create table if not exists artigos (
