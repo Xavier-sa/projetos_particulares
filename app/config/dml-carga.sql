@@ -1,9 +1,25 @@
 -- Inserir usuários (precisa ser antes dos artigos para garantir a referência correta)
-insert into usuarios(nome, email, telefone, data_nascimento, cpf) values
+INSERT INTO usuarios(nome, email, telefone, data_nascimento, cpf) VALUES
 ('xavier', 'xavier@gmail.com', '1234567890', '1985-04-15', '12345678901'),
 ('teste', 'teste@gmail.com', '1234567891', '1990-08-25', '98765432100'),
 ('santos', 'santos@gmail.com', '1234567892', '1988-12-01', '12332112345'),
-('wellington', 'wellington@gmail.com', '1234567893', '1992-11-30', '54321678901');
+('wellington', 'wellington@gmail.com', '1234567893', '1992-11-30', '54321678901'),
+('Abraão', 'abraao@gmail.com', '1234567894', '2000-01-01', '11223344556'),
+('Moisés', 'moises@gmail.com', '1234567895', '1980-03-15', '22334455667'),
+('David', 'david@gmail.com', '1234567896', '1995-06-20', '33445566778'),
+('Salomão', 'salomao@gmail.com', '1234567897', '1983-09-05', '44556677889'),
+('Maria', 'maria@gmail.com', '1234567898', '1998-07-25', '55667788990'),
+('José', 'jose@gmail.com', '1234567899', '1992-02-10', '66778899001'),
+('Pedro', 'pedro@gmail.com', '1234567900', '1990-04-18', '77889900112'),
+('Paulo', 'paulo@gmail.com', '1234567901', '1987-10-30', '88990011223'),
+('Raquel', 'raquel@gmail.com', '1234567902', '1993-11-12', '99001122334'),
+('Ruth', 'ruth@gmail.com', '1234567903', '1994-01-05', '10111223345'),
+('Eliseu', 'eliseu@gmail.com', '1234567904', '1989-03-23', '11223344567'),
+('Ester', 'ester@gmail.com', '1234567905', '1996-09-14', '22334455678'),
+('Isaías', 'isaias@gmail.com', '1234567906', '1984-12-12', '33445566789'),
+('Davi', 'davi@gmail.com', '1234567907', '1982-08-01', '44556677890'),
+('Samuel', 'samuel@gmail.com', '1234567908', '1981-07-30', '55667788901');
+
 
 -- Inserir categorias
 insert into categorias (nome) values
